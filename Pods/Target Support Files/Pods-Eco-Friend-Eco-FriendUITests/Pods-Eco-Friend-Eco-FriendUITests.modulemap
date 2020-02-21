@@ -1,0 +1,6 @@
+framework module Pods_Eco_Friend_Eco_FriendUITests {
+  umbrella header "Pods-Eco-Friend-Eco-FriendUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
