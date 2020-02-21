@@ -29,11 +29,11 @@ class MainViewController: UIViewController, MainViewInput {
     }
     
     private func configureNavigationBar() {
+        
         navigationBar = self.navigationController?.navigationBar
         navigationBar.backgroundColor = Global.Colors.lightGreen
         navigationBar.barTintColor = Global.Colors.lightGreen
         UIApplication.shared.statusBarUIView?.backgroundColor = Global.Colors.lightGreen
-        
     }
     
     private func configureButtons() {
@@ -45,22 +45,22 @@ class MainViewController: UIViewController, MainViewInput {
     }
     
     //MARK: - Actions
+    
     @IBAction func newsButtonPressed(_ sender: Any) {
-        
+        presenter.showScreen(with: .news)
     }
     
     @IBAction func marksButtonPressed(_ sender: Any) {
-    
+        presenter.showScreen(with: .marks)
     }
     
     @IBAction func trashButtonPressed(_ sender: Any) {
-        
+        presenter.showScreen(with: .trash)
     }
     
     @IBAction func mapButtonPressed(_ sender: Any) {
-        
+        presenter.showScreen(with: .map)
     }
     //MARK: - MainViewInput
-    
     
 }

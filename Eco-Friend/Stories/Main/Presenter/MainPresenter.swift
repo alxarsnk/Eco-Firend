@@ -19,4 +19,8 @@ class MainPresenter: MainViewOutput, MainInteractorOutput {
     func setupInitialState() {
         
     }
+    
+    func showScreen(with tag: ScreenTags) {
+        router.showScreen(with: tag)
+    }
 }

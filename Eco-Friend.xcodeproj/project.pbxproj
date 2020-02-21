@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8025E32400002E00974CF8 /* Marks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8025E22400002E00974CF8 /* Marks.storyboard */; };
+		1B8025F52400374100974CF8 /* TrashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025E82400374100974CF8 /* TrashPresenter.swift */; };
+		1B8025F62400374100974CF8 /* TrashModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025E92400374100974CF8 /* TrashModuleConfigurator.swift */; };
+		1B8025F72400374100974CF8 /* TrashViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025EB2400374100974CF8 /* TrashViewInput.swift */; };
+		1B8025F82400374100974CF8 /* TrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025EC2400374100974CF8 /* TrashViewController.swift */; };
+		1B8025F92400374100974CF8 /* TrashViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025ED2400374100974CF8 /* TrashViewOutput.swift */; };
+		1B8025FA2400374100974CF8 /* TrashInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025EF2400374100974CF8 /* TrashInteractorInput.swift */; };
+		1B8025FB2400374100974CF8 /* TrashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025F02400374100974CF8 /* TrashInteractor.swift */; };
+		1B8025FC2400374100974CF8 /* TrashInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025F12400374100974CF8 /* TrashInteractorOutput.swift */; };
+		1B8025FD2400374100974CF8 /* TrashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025F32400374100974CF8 /* TrashRouter.swift */; };
+		1B8025FE2400374100974CF8 /* TrashRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8025F42400374100974CF8 /* TrashRouterInput.swift */; };
+		1B8026002400375000974CF8 /* Trash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8025FF2400375000974CF8 /* Trash.storyboard */; };
 		1B8799AA239EA2C7009C44E8 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B879989239EA2C7009C44E8 /* MapPresenter.swift */; };
 		1B8799AB239EA2C7009C44E8 /* MapModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B87998A239EA2C7009C44E8 /* MapModuleConfigurator.swift */; };
 		1B8799AC239EA2C7009C44E8 /* MapViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B87998C239EA2C7009C44E8 /* MapViewOutput.swift */; };
@@ -52,6 +64,9 @@
 		1BDB7E1A23FEC9E70069F699 /* MarksRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7E0623FEC9E70069F699 /* MarksRouterInput.swift */; };
 		1BDB7E1C23FECA440069F699 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDB7E1B23FECA440069F699 /* News.storyboard */; };
 		1BDB7E2023FECE410069F699 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7E1F23FECE410069F699 /* Extensions.swift */; };
+		1BE1960623FEDFBE00B5EB10 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1960523FEDFBE00B5EB10 /* TabBarViewController.swift */; };
+		1BE1960823FEDFCF00B5EB10 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1960723FEDFCF00B5EB10 /* TabBar.storyboard */; };
+		1BE1960A23FEE13600B5EB10 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1960923FEE13600B5EB10 /* Navigation.swift */; };
 		1BF67E21239D149900A69134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF67E20239D149900A69134 /* AppDelegate.swift */; };
 		1BF67E23239D149900A69134 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF67E22239D149900A69134 /* SceneDelegate.swift */; };
 		1BF67E2B239D149900A69134 /* Eco_Friend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BF67E29239D149900A69134 /* Eco_Friend.xcdatamodeld */; };
@@ -79,6 +94,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B8025E22400002E00974CF8 /* Marks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Marks.storyboard; sourceTree = "<group>"; };
+		1B8025E82400374100974CF8 /* TrashPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashPresenter.swift; sourceTree = "<group>"; };
+		1B8025E92400374100974CF8 /* TrashModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashModuleConfigurator.swift; sourceTree = "<group>"; };
+		1B8025EB2400374100974CF8 /* TrashViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashViewInput.swift; sourceTree = "<group>"; };
+		1B8025EC2400374100974CF8 /* TrashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashViewController.swift; sourceTree = "<group>"; };
+		1B8025ED2400374100974CF8 /* TrashViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashViewOutput.swift; sourceTree = "<group>"; };
+		1B8025EF2400374100974CF8 /* TrashInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashInteractorInput.swift; sourceTree = "<group>"; };
+		1B8025F02400374100974CF8 /* TrashInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashInteractor.swift; sourceTree = "<group>"; };
+		1B8025F12400374100974CF8 /* TrashInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashInteractorOutput.swift; sourceTree = "<group>"; };
+		1B8025F32400374100974CF8 /* TrashRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashRouter.swift; sourceTree = "<group>"; };
+		1B8025F42400374100974CF8 /* TrashRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashRouterInput.swift; sourceTree = "<group>"; };
+		1B8025FF2400375000974CF8 /* Trash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trash.storyboard; sourceTree = "<group>"; };
 		1B879989239EA2C7009C44E8 /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		1B87998A239EA2C7009C44E8 /* MapModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModuleConfigurator.swift; sourceTree = "<group>"; };
 		1B87998C239EA2C7009C44E8 /* MapViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewOutput.swift; sourceTree = "<group>"; };
@@ -124,6 +151,9 @@
 		1BDB7E0623FEC9E70069F699 /* MarksRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarksRouterInput.swift; sourceTree = "<group>"; };
 		1BDB7E1B23FECA440069F699 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		1BDB7E1F23FECE410069F699 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1BE1960523FEDFBE00B5EB10 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1BE1960723FEDFCF00B5EB10 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		1BE1960923FEE13600B5EB10 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		1BF67E1D239D149900A69134 /* Eco-Friend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco-Friend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF67E20239D149900A69134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BF67E22239D149900A69134 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +194,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B8025E62400374100974CF8 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				1B8025E72400374100974CF8 /* Presenter */,
+				1B8025E92400374100974CF8 /* TrashModuleConfigurator.swift */,
+				1B8025EA2400374100974CF8 /* View */,
+				1B8025EE2400374100974CF8 /* Interactor */,
+				1B8025F22400374100974CF8 /* Router */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		1B8025E72400374100974CF8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1B8025E82400374100974CF8 /* TrashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1B8025EA2400374100974CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B8025EB2400374100974CF8 /* TrashViewInput.swift */,
+				1B8025EC2400374100974CF8 /* TrashViewController.swift */,
+				1B8025ED2400374100974CF8 /* TrashViewOutput.swift */,
+				1B8025FF2400375000974CF8 /* Trash.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B8025EE2400374100974CF8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1B8025EF2400374100974CF8 /* TrashInteractorInput.swift */,
+				1B8025F02400374100974CF8 /* TrashInteractor.swift */,
+				1B8025F12400374100974CF8 /* TrashInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1B8025F22400374100974CF8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1B8025F32400374100974CF8 /* TrashRouter.swift */,
+				1B8025F42400374100974CF8 /* TrashRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		1B879987239EA2C7009C44E8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +297,7 @@
 		1B8DDB4C239D750B00FEF405 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				1B8025E62400374100974CF8 /* Trash */,
 				1BDB7DF823FEC9E70069F699 /* Marks */,
 				1BDB7DCC23FEC97E0069F699 /* News */,
 				1BDB7DAE23FEC2370069F699 /* Main */,
@@ -228,6 +309,7 @@
 		1BA1E9DA239FB92A001F88D0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1BE1960423FEDF7000B5EB10 /* TabBar */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -358,6 +440,7 @@
 				1BDB7DFC23FEC9E70069F699 /* MarksViewOutput.swift */,
 				1BDB7DFD23FEC9E70069F699 /* MarksViewInput.swift */,
 				1BDB7DFE23FEC9E70069F699 /* MarksViewController.swift */,
+				1B8025E22400002E00974CF8 /* Marks.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +462,23 @@
 				1BDB7E0623FEC9E70069F699 /* MarksRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		1BE1960423FEDF7000B5EB10 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1BE1960523FEDFBE00B5EB10 /* TabBarViewController.swift */,
+				1BE1960723FEDFCF00B5EB10 /* TabBar.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1BE1960C23FEE14F00B5EB10 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1BDB7E1F23FECE410069F699 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1BF67E14239D149900A69134 = {
@@ -404,11 +504,12 @@
 		1BF67E1F239D149900A69134 /* Eco-Friend */ = {
 			isa = PBXGroup;
 			children = (
+				1BE1960C23FEE14F00B5EB10 /* Helpers */,
 				1BA1E9DA239FB92A001F88D0 /* UI */,
 				1B8DDB4C239D750B00FEF405 /* Stories */,
-				1B8DDB2B239D1F6E00FEF405 /* Global.swift */,
-				1BDB7E1F23FECE410069F699 /* Extensions.swift */,
 				1BF67E20239D149900A69134 /* AppDelegate.swift */,
+				1B8DDB2B239D1F6E00FEF405 /* Global.swift */,
+				1BE1960923FEE13600B5EB10 /* Navigation.swift */,
 				1BF67E22239D149900A69134 /* SceneDelegate.swift */,
 				1BF67E2C239D149F00A69134 /* Assets.xcassets */,
 				1BF67E2E239D149F00A69134 /* LaunchScreen.storyboard */,
@@ -541,9 +642,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8799B7239EA533009C44E8 /* Map.storyboard in Resources */,
+				1B8026002400375000974CF8 /* Trash.storyboard in Resources */,
 				1BF67E30239D149F00A69134 /* LaunchScreen.storyboard in Resources */,
 				1BDB7E1C23FECA440069F699 /* News.storyboard in Resources */,
 				1BF67E2D239D149F00A69134 /* Assets.xcassets in Resources */,
+				1B8025E32400002E00974CF8 /* Marks.storyboard in Resources */,
+				1BE1960823FEDFCF00B5EB10 /* TabBar.storyboard in Resources */,
 				1BDB7DC823FEC2430069F699 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,18 +676,22 @@
 				1B8799AA239EA2C7009C44E8 /* MapPresenter.swift in Sources */,
 				1BF67E2B239D149900A69134 /* Eco_Friend.xcdatamodeld in Sources */,
 				1BF67E21239D149900A69134 /* AppDelegate.swift in Sources */,
+				1BE1960A23FEE13600B5EB10 /* Navigation.swift in Sources */,
 				1B8799B0239EA2C7009C44E8 /* MapInteractor.swift in Sources */,
 				1BDB7DDF23FEC97E0069F699 /* NewsModuleConfigurator.swift in Sources */,
 				1BDB7E1523FEC9E70069F699 /* MarksInteractorOutput.swift in Sources */,
 				1BF67E23239D149900A69134 /* SceneDelegate.swift in Sources */,
 				1BDB7DC323FEC2370069F699 /* MainInteractor.swift in Sources */,
 				1BDB7DC123FEC2370069F699 /* MainViewController.swift in Sources */,
+				1B8025F92400374100974CF8 /* TrashViewOutput.swift in Sources */,
 				1BDB7E1223FEC9E70069F699 /* MarksViewOutput.swift in Sources */,
 				1BDB7DC223FEC2370069F699 /* MainInteractorOutput.swift in Sources */,
 				1BDB7DBE23FEC2370069F699 /* MainModuleConfigurator.swift in Sources */,
 				1BDB7E1A23FEC9E70069F699 /* MarksRouterInput.swift in Sources */,
 				1B8799AC239EA2C7009C44E8 /* MapViewOutput.swift in Sources */,
+				1B8025FC2400374100974CF8 /* TrashInteractorOutput.swift in Sources */,
 				1BDB7DDD23FEC97E0069F699 /* NewsViewOutput.swift in Sources */,
+				1B8025F72400374100974CF8 /* TrashViewInput.swift in Sources */,
 				1BDB7E2023FECE410069F699 /* Extensions.swift in Sources */,
 				1BDB7DDE23FEC97E0069F699 /* NewsViewController.swift in Sources */,
 				1B8799AF239EA2C7009C44E8 /* MapInteractorOutput.swift in Sources */,
@@ -592,7 +700,10 @@
 				1BDB7E1423FEC9E70069F699 /* MarksViewController.swift in Sources */,
 				1BDB7E1823FEC9E70069F699 /* MarksModuleConfigurator.swift in Sources */,
 				1B8799B1239EA2C7009C44E8 /* MapInteractorInput.swift in Sources */,
+				1B8025FA2400374100974CF8 /* TrashInteractorInput.swift in Sources */,
 				1B8DDB2C239D1F6E00FEF405 /* Global.swift in Sources */,
+				1B8025F52400374100974CF8 /* TrashPresenter.swift in Sources */,
+				1B8025F82400374100974CF8 /* TrashViewController.swift in Sources */,
 				1BDB7E1623FEC9E70069F699 /* MarksInteractorInput.swift in Sources */,
 				1BDB7E1923FEC9E70069F699 /* MarksRouter.swift in Sources */,
 				1B8799B2239EA2C7009C44E8 /* MapRouter.swift in Sources */,
@@ -604,11 +715,16 @@
 				1BDB7DE323FEC97E0069F699 /* NewsRouter.swift in Sources */,
 				1BDB7DE123FEC97E0069F699 /* NewsInteractorOutput.swift in Sources */,
 				1B8799B3239EA2C7009C44E8 /* MapRouterInput.swift in Sources */,
+				1B8025FE2400374100974CF8 /* TrashRouterInput.swift in Sources */,
+				1B8025FB2400374100974CF8 /* TrashInteractor.swift in Sources */,
 				1BDB7DE023FEC97E0069F699 /* NewsInteractor.swift in Sources */,
 				1B8799AD239EA2C7009C44E8 /* MapViewController.swift in Sources */,
 				1B8799AE239EA2C7009C44E8 /* MapViewInput.swift in Sources */,
+				1BE1960623FEDFBE00B5EB10 /* TabBarViewController.swift in Sources */,
+				1B8025FD2400374100974CF8 /* TrashRouter.swift in Sources */,
 				1BDB7E1323FEC9E70069F699 /* MarksViewInput.swift in Sources */,
 				1BDB7DE423FEC97E0069F699 /* NewsRouterInput.swift in Sources */,
+				1B8025F62400374100974CF8 /* TrashModuleConfigurator.swift in Sources */,
 				1BDB7DC523FEC2370069F699 /* MainRouterInput.swift in Sources */,
 				1BDB7DE223FEC97E0069F699 /* NewsInteractorInput.swift in Sources */,
 				1BDB7DDB23FEC97E0069F699 /* NewsPresenter.swift in Sources */,

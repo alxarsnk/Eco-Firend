@@ -8,24 +8,24 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="8hq-RB-cwW">
+        <scene sceneID="6WS-0t-VaV">
             <objects>
-                <viewController storyboardIdentifier="news" id="vgn-nA-Td2" customClass="NewsViewController" customModule="Eco_Friend" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lcF-5a-8iK">
+                <viewController storyboardIdentifier="trash" id="vqH-m2-mOy" customClass="TrashViewController" customModule="Eco_Friend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wzg-ei-ySc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="dHF-FJ-ECo"/>
+                        <viewLayoutGuide key="safeArea" id="EYH-7r-DNl"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Adi-E0-4EF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="A3U-7i-YuW" customClass="NewsModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9P-g5-OAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="ogb-TO-toP" customClass="TrashModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">
                     <connections>
-                        <outlet property="viewController" destination="vgn-nA-Td2" id="Cp4-Kg-EQA"/>
+                        <outlet property="viewController" destination="vqH-m2-mOy" id="OS0-2L-2GQ"/>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-22" y="111"/>
+            <point key="canvasLocation" x="-3" y="99"/>
         </scene>
     </scenes>
 </document>

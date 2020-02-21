@@ -10,4 +10,5 @@ import Foundation
 
 protocol MainRouterInput: AnyObject {
     
+    func showScreen(with tag: ScreenTags)
 }
