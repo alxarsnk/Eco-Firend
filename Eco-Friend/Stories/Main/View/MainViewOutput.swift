@@ -11,4 +11,7 @@ import Foundation
 protocol MainViewOutput: AnyObject {
     
     func setupInitialState()
+    
+    func showScreen(with tag: ScreenTags)
+    
 }

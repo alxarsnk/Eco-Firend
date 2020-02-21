@@ -14,5 +14,7 @@ class MainRouter: MainRouterInput {
     
     //MARK: - MainRouterInput
     
-    
+    func showScreen(with tag: ScreenTags) {
+        UIApplication.shared.windows.first?.rootViewController = Navigation.shared.tabBarController.showScreen(with: tag)
+    }
 }
