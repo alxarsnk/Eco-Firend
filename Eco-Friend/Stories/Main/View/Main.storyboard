@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZSN-5t-Q7X">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7Io-el-4Gy">
+            <objects>
+                <viewController id="9Id-d7-ywC" customClass="MainViewController" customModule="Eco_Friend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N33-o5-yo3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDQ-hN-49n">
+                                <rect key="frame" x="0.0" y="139.99999999999997" width="414" height="297.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите интересущий Вас пункт" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlS-oB-QV1">
+                                        <rect key="frame" x="16" y="108" width="382" height="81.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="XlS-oB-QV1" firstAttribute="leading" secondItem="bDQ-hN-49n" secondAttribute="leading" constant="16" id="B3R-3R-4Wz"/>
+                                    <constraint firstItem="XlS-oB-QV1" firstAttribute="centerX" secondItem="bDQ-hN-49n" secondAttribute="centerX" id="NCX-hT-EDY"/>
+                                    <constraint firstItem="XlS-oB-QV1" firstAttribute="centerY" secondItem="bDQ-hN-49n" secondAttribute="centerY" id="ahy-Hb-ayk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReA-Js-8ZO">
+                                <rect key="frame" x="0.0" y="437.33333333333326" width="414" height="424.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="D9y-fz-eZg">
+                                        <rect key="frame" x="16" y="95.333333333333314" width="382" height="234"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19X-Cr-OWH">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                                <color key="backgroundColor" red="0.50980392159999999" green="0.86274509799999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="cKT-EX-bnK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="Хочу узнать что-то новое">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="newsButtonPressed:" destination="9Id-d7-ywC" eventType="touchUpInside" id="WUu-UP-bZG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgw-yo-RYc">
+                                                <rect key="frame" x="0.0" y="62" width="382" height="48"/>
+                                                <color key="backgroundColor" red="0.50980392159999999" green="0.86274509799999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Ww0-AS-jWz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="Хочу разобртаься в маркирвоках">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="marksButtonPressed:" destination="9Id-d7-ywC" eventType="touchUpInside" id="h7h-W2-J23"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70P-Fq-sf3">
+                                                <rect key="frame" x="0.0" y="124" width="382" height="48"/>
+                                                <color key="backgroundColor" red="0.50980392159999999" green="0.86274509799999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Ho2-16-4H5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="Как подготовить к сдаче мусор">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="trashButtonPressed:" destination="9Id-d7-ywC" eventType="touchUpInside" id="L4g-Q1-zOM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjU-CB-7zs">
+                                                <rect key="frame" x="0.0" y="186" width="382" height="48"/>
+                                                <color key="backgroundColor" red="0.50980392159999999" green="0.86274509799999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="ruh-KP-FuM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="Куда везти мусор">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mapButtonPressed:" destination="9Id-d7-ywC" eventType="touchUpInside" id="NXV-Wh-3dc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="D9y-fz-eZg" firstAttribute="centerX" secondItem="ReA-Js-8ZO" secondAttribute="centerX" id="GtS-Hb-20O"/>
+                                    <constraint firstItem="D9y-fz-eZg" firstAttribute="centerY" secondItem="ReA-Js-8ZO" secondAttribute="centerY" id="UGl-JK-rZA"/>
+                                    <constraint firstItem="D9y-fz-eZg" firstAttribute="leading" secondItem="ReA-Js-8ZO" secondAttribute="leading" constant="16" id="vMW-9H-B85"/>
+                                    <constraint firstAttribute="trailing" secondItem="D9y-fz-eZg" secondAttribute="trailing" constant="16" id="wVC-ge-onE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7ZE-fP-Zop" firstAttribute="trailing" secondItem="bDQ-hN-49n" secondAttribute="trailing" id="2PJ-eo-0nC"/>
+                            <constraint firstItem="bDQ-hN-49n" firstAttribute="top" secondItem="7ZE-fP-Zop" secondAttribute="top" id="Cjt-yw-r1e"/>
+                            <constraint firstItem="bDQ-hN-49n" firstAttribute="leading" secondItem="7ZE-fP-Zop" secondAttribute="leading" id="IFK-sg-bBA"/>
+                            <constraint firstItem="bDQ-hN-49n" firstAttribute="height" secondItem="ReA-Js-8ZO" secondAttribute="height" multiplier="0.7" id="YYl-hn-UId"/>
+                            <constraint firstItem="7ZE-fP-Zop" firstAttribute="trailing" secondItem="ReA-Js-8ZO" secondAttribute="trailing" id="Zuw-0L-WBR"/>
+                            <constraint firstItem="ReA-Js-8ZO" firstAttribute="leading" secondItem="7ZE-fP-Zop" secondAttribute="leading" id="cFG-ZE-A1K"/>
+                            <constraint firstItem="7ZE-fP-Zop" firstAttribute="bottom" secondItem="ReA-Js-8ZO" secondAttribute="bottom" id="fzx-WI-CVz"/>
+                            <constraint firstItem="ReA-Js-8ZO" firstAttribute="top" secondItem="bDQ-hN-49n" secondAttribute="bottom" id="sUS-IU-gtf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7ZE-fP-Zop"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Меню" id="DJ7-Yc-z8I"/>
+                    <connections>
+                        <outlet property="mapButton" destination="JjU-CB-7zs" id="Jsc-io-lWF"/>
+                        <outlet property="marksButton" destination="Mgw-yo-RYc" id="kd8-tS-f9w"/>
+                        <outlet property="newsButton" destination="19X-Cr-OWH" id="9zp-Yd-DqY"/>
+                        <outlet property="trashButton" destination="70P-Fq-sf3" id="Nen-Xw-CNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4p-9c-RKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="qup-Mf-cRw" customClass="MainModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="9Id-d7-ywC" id="uDA-6L-Fsf"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xk1-Ni-dVb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZSN-5t-Q7X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vDW-Tm-9MA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Id-d7-ywC" kind="relationship" relationship="rootViewController" id="moh-dl-GpH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KW1-wY-64E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>
