@@ -33,7 +33,7 @@ class MainViewController: UIViewController, MainViewInput {
         navigationBar = self.navigationController?.navigationBar
         navigationBar.backgroundColor = Global.Colors.lightGreen
         navigationBar.barTintColor = Global.Colors.lightGreen
-        UIApplication.shared.statusBarUIView?.backgroundColor = Global.Colors.lightGreen
+        navigationController?.setStatusBar(backgroundColor: Global.Colors.lightGreen!)
     }
     
     private func configureButtons() {

@@ -14,9 +14,24 @@
                     <view key="view" contentMode="scaleToFill" id="Wzg-ei-ySc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFT-FQ-fMY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EYH-7r-DNl" firstAttribute="trailing" secondItem="jFT-FQ-fMY" secondAttribute="trailing" id="5VW-BI-0Cv"/>
+                            <constraint firstItem="jFT-FQ-fMY" firstAttribute="top" secondItem="EYH-7r-DNl" secondAttribute="top" id="n8K-XT-eXR"/>
+                            <constraint firstItem="EYH-7r-DNl" firstAttribute="bottom" secondItem="jFT-FQ-fMY" secondAttribute="bottom" id="wyl-fk-0cm"/>
+                            <constraint firstItem="jFT-FQ-fMY" firstAttribute="leading" secondItem="EYH-7r-DNl" secondAttribute="leading" id="x9N-6t-3fE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EYH-7r-DNl"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jFT-FQ-fMY" id="0nG-6q-GQE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9P-g5-OAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="ogb-TO-toP" customClass="TrashModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">

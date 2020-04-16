@@ -10,4 +10,5 @@ import Foundation
 
 protocol TrashRouterInput: AnyObject {
     
+    func showTrashDetail()
 }

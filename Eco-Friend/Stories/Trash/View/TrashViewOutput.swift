@@ -11,4 +11,6 @@ import Foundation
 protocol TrashViewOutput: AnyObject {
     
     func setupInitialState()
+    
+    func showTrashDetail()
 }

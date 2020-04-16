@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,19 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mnj-Cx-2bO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </mapView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUV-zC-tm7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mnj-Cx-2bO" firstAttribute="top" secondItem="Ars-Oj-Vns" secondAttribute="top" id="D6i-FL-Wn2"/>
-                            <constraint firstAttribute="bottom" secondItem="mnj-Cx-2bO" secondAttribute="bottom" id="IgS-HA-nTd"/>
-                            <constraint firstItem="sfv-yl-Wei" firstAttribute="trailing" secondItem="mnj-Cx-2bO" secondAttribute="trailing" id="iOL-l8-OZR"/>
-                            <constraint firstItem="mnj-Cx-2bO" firstAttribute="leading" secondItem="sfv-yl-Wei" secondAttribute="leading" id="zIj-dI-gz9"/>
+                            <constraint firstItem="sfv-yl-Wei" firstAttribute="bottom" secondItem="iUV-zC-tm7" secondAttribute="bottom" id="RGV-Oa-Xnf"/>
+                            <constraint firstItem="iUV-zC-tm7" firstAttribute="top" secondItem="sfv-yl-Wei" secondAttribute="top" id="c5Q-n7-IGx"/>
+                            <constraint firstItem="iUV-zC-tm7" firstAttribute="trailing" secondItem="sfv-yl-Wei" secondAttribute="trailing" id="fLl-H1-yR3"/>
+                            <constraint firstItem="iUV-zC-tm7" firstAttribute="leading" secondItem="sfv-yl-Wei" secondAttribute="leading" id="ssJ-OS-BcS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sfv-yl-Wei"/>
                     </view>
+                    <connections>
+                        <outlet property="webkitView" destination="iUV-zC-tm7" id="Hju-Tl-OPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qv7-M1-6EQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="SSs-Am-xIb" customClass="MapModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">
@@ -36,7 +44,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="139" y="113"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
 </document>

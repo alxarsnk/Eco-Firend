@@ -1,4 +1,4 @@
-framework module Pods_Eco_Friend {
+module Pods_Eco_Friend {
   umbrella header "Pods-Eco-Friend-umbrella.h"
 
   export *

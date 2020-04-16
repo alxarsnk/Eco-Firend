@@ -22,25 +22,26 @@ class TabBarViewController: UITabBarController, NavigationProtocol {
     
     override func viewDidLoad() {
         
+        tabBar.barTintColor = Global.Colors.lightGreen
+        tabBar.tintColor = UIColor.black
+        
         let newsStoryboard = UIStoryboard(name: "News", bundle: nil)
         let marksStoryboard = UIStoryboard(name: "Marks", bundle: nil)
         let trashStoryboard = UIStoryboard(name: "Trash", bundle: nil)
         let mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
         
-        
         newsViewController = newsStoryboard.instantiateViewController(withIdentifier: "news") as? NewsViewInput
-        (newsViewController as! UIViewController).tabBarItem = UITabBarItem(title: "News", image: nil, tag: 0)
-        
         marksViewController = marksStoryboard.instantiateViewController(withIdentifier: "marks") as? MarksViewInput
-        (marksViewController as! UIViewController).tabBarItem = UITabBarItem(title: "Marks", image: nil, tag: 1)
-        
         trashViewController = trashStoryboard.instantiateViewController(withIdentifier: "trash") as? TrashViewInput
-        (trashViewController as! UIViewController).tabBarItem = UITabBarItem(title: "Trash", image: nil, tag: 2)
-        
         mapViewController = mapStoryboard.instantiateViewController(withIdentifier: "map") as? MapViewInput
-        (mapViewController as! UIViewController).tabBarItem = UITabBarItem(title: "Map", image: nil, tag: 4)
         
-        self.viewControllers = [newsViewController as! UIViewController, marksViewController as! UIViewController, trashViewController as! UIViewController, mapViewController as! UIViewController]
+        
+        self.viewControllers = [newsViewController as! UIViewController, marksViewController as! UIViewController, trashViewController as! UIViewController, mapViewController as! UIViewController].map{ UINavigationController(rootViewController: $0) }
+        
+        (newsViewController as! UIViewController).navigationController?.tabBarItem = UITabBarItem(title: "Новости", image: UIImage(named: "tb_news_ic"), tag: 0)
+        (marksViewController as! UIViewController).navigationController?.tabBarItem = UITabBarItem(title: "Маркировки", image: UIImage(named: "tb_marks_ic"), tag: 1)
+        (trashViewController as! UIViewController).navigationController?.tabBarItem = UITabBarItem(title: "Сортировка", image: UIImage(named: "tb_trash_ic"), tag: 2)
+        (mapViewController as! UIViewController).navigationController?.tabBarItem = UITabBarItem(title: "Карта", image: UIImage(named: "tb_map_ic"), tag: 4)
     }
     
     func showScreen(with tag: ScreenTags) -> UIViewController {

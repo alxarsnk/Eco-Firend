@@ -14,5 +14,9 @@ class MarksRouter: MarksRouterInput {
     
     //MARK: - MarksRouterInput
     
+    func showMarksDetail() {
+        let vc = Navigation.getDetailScreen(storyboardName: "MarksDetail", screenName: "marksDetailViewController")
+        view.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

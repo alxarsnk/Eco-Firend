@@ -19,4 +19,8 @@ class MarksPresenter: MarksViewOutput, MarksInteractorOutput {
     func setupInitialState() {
         
     }
+    
+    func showMarksDetail() {
+        router.showMarksDetail()
+    }
 }

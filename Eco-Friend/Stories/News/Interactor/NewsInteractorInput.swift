@@ -10,4 +10,11 @@ import Foundation
 
 protocol NewsInteractorInput: AnyObject {
     
+    func requsetData(with token: String)
+    
+    func getPostsCount() -> Int
+    
+    func getCellModel(at index: Int) -> NewsTableViewCellModel
+    
+    func getAuthURL() -> URL
 }

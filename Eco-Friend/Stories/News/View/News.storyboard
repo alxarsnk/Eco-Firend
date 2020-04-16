@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,9 +14,31 @@
                     <view key="view" contentMode="scaleToFill" id="lcF-5a-8iK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-LW-lH5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="FAz-UI-MrW">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FAz-UI-MrW" firstAttribute="centerX" secondItem="lcF-5a-8iK" secondAttribute="centerX" id="8PI-hQ-RK8"/>
+                            <constraint firstItem="FAz-UI-MrW" firstAttribute="centerY" secondItem="lcF-5a-8iK" secondAttribute="centerY" id="Ap6-mB-c0o"/>
+                            <constraint firstItem="GWP-LW-lH5" firstAttribute="leading" secondItem="dHF-FJ-ECo" secondAttribute="leading" id="VRj-O9-wJd"/>
+                            <constraint firstItem="dHF-FJ-ECo" firstAttribute="trailing" secondItem="GWP-LW-lH5" secondAttribute="trailing" id="VW8-BO-xrL"/>
+                            <constraint firstItem="GWP-LW-lH5" firstAttribute="top" secondItem="dHF-FJ-ECo" secondAttribute="top" id="nCT-Wg-fAe"/>
+                            <constraint firstItem="dHF-FJ-ECo" firstAttribute="bottom" secondItem="GWP-LW-lH5" secondAttribute="bottom" id="tXn-gn-MsS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dHF-FJ-ECo"/>
                     </view>
+                    <navigationItem key="navigationItem" title=" Новости" id="f9N-zd-bpY"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FAz-UI-MrW" id="iIK-4z-nUa"/>
+                        <outlet property="tableView" destination="GWP-LW-lH5" id="ZKy-p4-1eB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adi-E0-4EF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="A3U-7i-YuW" customClass="NewsModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">
@@ -25,7 +47,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-22" y="111"/>
+            <point key="canvasLocation" x="886.95652173913049" y="110.49107142857143"/>
         </scene>
     </scenes>
 </document>

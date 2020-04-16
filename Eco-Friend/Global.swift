@@ -16,6 +16,10 @@ class Global {
     public let screenSize: CGSize  = {
         return UIScreen.main.bounds.size
     }()
+
+    public struct Services {
+        static let networkService = NetworkService()
+    }
     
     public struct Colors {
         static let lightGreen = UIColor(hex: "82DC9B")

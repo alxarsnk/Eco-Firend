@@ -11,4 +11,14 @@ import Foundation
 protocol NewsViewOutput: AnyObject {
     
     func setupInitialState()
+    
+    func requsetData(with token: String)
+    
+    func getPostsCount() -> Int
+    
+    func getCellModel(at index: Int) -> NewsTableViewCellModel
+    
+    func showNewsDeatil(with model: NewsTableViewCellModel)
+    
+    func getAuthURL() -> URL
 }

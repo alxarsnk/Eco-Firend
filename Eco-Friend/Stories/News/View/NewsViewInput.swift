@@ -10,4 +10,14 @@ import Foundation
 
 protocol NewsViewInput: AnyObject {
     
+    func startAnimating()
+    
+    func stopAnimating()
+    
+    func updateView()
+}
+
+protocol NewsViewFromCellInput: AnyObject {
+
+    func addToFavourites(at indexPath: IndexPath)
 }

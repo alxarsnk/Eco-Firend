@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import WebKit
 class MapViewController: UIViewController, MapViewInput {
     
     var presenter: MapViewOutput!
+    @IBOutlet weak var webkitView: WKWebView!
     
     //MARK: - Методы
     
@@ -18,6 +19,9 @@ class MapViewController: UIViewController, MapViewInput {
         super.viewDidLoad()
         
         presenter.setupInitialState()
+        
+        webkitView.load(URLRequest(url: URL(string: "https://recyclemap.ru")!))
+        self.navigationController?.navigationBar.isHidden = true
     }
    
     //MARK: - MapViewInput

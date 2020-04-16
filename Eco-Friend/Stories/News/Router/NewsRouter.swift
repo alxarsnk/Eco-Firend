@@ -13,6 +13,10 @@ class NewsRouter: NewsRouterInput {
     weak var view: UIViewController!
     
     //MARK: - NewsRouterInput
-    
+    func showNewsDeatil(with model: NewsTableViewCellModel) {
+        let vc = Navigation.getDetailScreen(storyboardName: "NewsDetail", screenName: "newsDetailViewController") as! NewsDetailViewInput
+        vc.setModel(model: model)
+        view.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+    }
     
 }

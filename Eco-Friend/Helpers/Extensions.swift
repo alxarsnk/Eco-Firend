@@ -33,26 +33,29 @@ extension UIColor {
     }
 }
 
-//MARK: - UIApplication
-extension UIApplication {
-var statusBarUIView: UIView? {
-    if #available(iOS 13.0, *) {
-        let tag = 38482
-        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+extension UINavigationController {
 
-        if let statusBar = keyWindow?.viewWithTag(tag) {
-            return statusBar
+    func setStatusBar(backgroundColor: UIColor) {
+        let statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
         } else {
-            guard let statusBarFrame = keyWindow?.windowScene?.statusBarManager?.statusBarFrame else { return nil }
-            let statusBarView = UIView(frame: statusBarFrame)
-            statusBarView.tag = tag
-            keyWindow?.addSubview(statusBarView)
-            return statusBarView
+            statusBarFrame = UIApplication.shared.statusBarFrame
         }
-    } else if responds(to: Selector(("statusBar"))) {
-        return value(forKey: "statusBar") as? UIView
-    } else {
-        return nil
+        let statusBarView = UIView(frame: statusBarFrame)
+        statusBarView.backgroundColor = backgroundColor
+        view.addSubview(statusBarView)
     }
-  }
+}
+
+extension String {
+    
+    func slice(from: String, to: String) -> String? {
+        
+        return (range(of: from)?.upperBound).flatMap { substringFrom in
+            (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
+                String(self[substringFrom..<substringTo])
+            }
+        }
+    }
 }

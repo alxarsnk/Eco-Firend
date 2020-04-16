@@ -19,4 +19,8 @@ class TrashPresenter: TrashViewOutput, TrashInteractorOutput {
     func setupInitialState() {
         
     }
+    
+    func showTrashDetail() {
+        router.showTrashDetail()
+    }
 }

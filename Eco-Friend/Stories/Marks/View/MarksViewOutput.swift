@@ -11,4 +11,6 @@ import Foundation
 protocol MarksViewOutput: AnyObject {
     
     func setupInitialState()
+    
+    func showMarksDetail()
 }

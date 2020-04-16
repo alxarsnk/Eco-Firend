@@ -3,10 +3,11 @@
 
 target 'Eco-Friend' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  use_modular_headers!
 
   # Pods for Eco-Friend
 	pod 'Moya'
+	pod 'SDWebImage'
 
   target 'Eco-FriendTests' do
     inherit! :search_paths
