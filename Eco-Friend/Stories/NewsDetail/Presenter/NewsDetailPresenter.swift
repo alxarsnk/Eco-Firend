@@ -19,4 +19,8 @@ class NewsDetailPresenter: NewsDetailViewOutput, NewsDetailInteractorOutput {
     func setupInitialState() {
         
     }
+    
+    func showCollection(withImagesURL imagesURL: [URL], at indexPath: IndexPath) {
+        router.showCollection(withImagesURL: imagesURL, at: indexPath)
+    }
 }

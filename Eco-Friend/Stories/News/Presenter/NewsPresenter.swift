@@ -20,8 +20,8 @@ class NewsPresenter: NewsViewOutput, NewsInteractorOutput {
         
     }
     
-    func requsetData(with token: String) {
-        interactor.requsetData(with: token)
+    func requsetData() {
+        interactor.requsetData()
     }
     
     func getPostsCount() -> Int {
@@ -36,9 +36,29 @@ class NewsPresenter: NewsViewOutput, NewsInteractorOutput {
         return interactor.getAuthURL()
     }
     
+    func addToFavourites(at indexPath: IndexPath) {
+        interactor.addToFavourites(at: indexPath)
+    }
+    
+    func removeFromFavourites(at indexPath: IndexPath) {
+        interactor.removeFromFavourites(at: indexPath)
+    }
+    
+    func showFavouritesPage() {
+        router.showFavourites()
+    }
+    
+    func clearCookie() {
+        interactor.clearCookie()
+    }
+    
     //MARK: - NewsInteractorOutput
-    func updateView() {
-        view.updateView()
+    func successUpdateView() {
+        view.successUpdateView()
+    }
+    
+    func failureUpdateView() {
+        view.failureUpdateView()
     }
     
     func showNewsDeatil(with model: NewsTableViewCellModel) {

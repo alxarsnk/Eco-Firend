@@ -10,4 +10,5 @@ import Foundation
 
 protocol NewsDetailRouterInput: AnyObject {
     
+    func showCollection(withImagesURL imagesURL: [URL], at indexPath: IndexPath)
 }

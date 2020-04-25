@@ -14,10 +14,25 @@ protocol NewsViewInput: AnyObject {
     
     func stopAnimating()
     
-    func updateView()
+    func successUpdateView()
+    
+    func failureUpdateView()
 }
 
 protocol NewsViewFromCellInput: AnyObject {
 
     func addToFavourites(at indexPath: IndexPath)
+    
+    func removeFromFavourites(at indexPath: IndexPath)
+}
+
+extension NewsViewFromCellInput {
+    
+    func addToFavourites(at indexPath: IndexPath) {
+        print("override me")
+    }
+    
+    func removeFromFavourites(at indexPath: IndexPath) {
+        print("override me")
+    }
 }

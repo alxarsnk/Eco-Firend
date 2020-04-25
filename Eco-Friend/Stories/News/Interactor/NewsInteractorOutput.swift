@@ -10,6 +10,7 @@ import Foundation
 
 protocol NewsInteractorOutput: AnyObject {
     
-    func updateView()
+    func successUpdateView()
     
+    func failureUpdateView()
 }

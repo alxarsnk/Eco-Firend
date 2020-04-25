@@ -11,4 +11,6 @@ import Foundation
 protocol NewsRouterInput: AnyObject {
     
     func showNewsDeatil(with model: NewsTableViewCellModel)
+    
+    func showFavourites()
 }

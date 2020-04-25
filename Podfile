@@ -8,7 +8,8 @@ target 'Eco-Friend' do
   # Pods for Eco-Friend
 	pod 'Moya'
 	pod 'SDWebImage'
-
+	pod 'Realm'
+	pod 'RealmSwift'
   target 'Eco-FriendTests' do
     inherit! :search_paths
     # Pods for testing

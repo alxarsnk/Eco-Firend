@@ -30,12 +30,12 @@
                                 <rect key="frame" x="0.0" y="89.5" width="730" height="300.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UB7-iF-GTj">
-                                <rect key="frame" x="605" y="412" width="117" height="28"/>
+                                <rect key="frame" x="676" y="412" width="46" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6x-ak-FM6">
-                                        <rect key="frame" x="5" y="0.0" width="104" height="28"/>
+                                        <rect key="frame" x="8" y="0.0" width="30" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="+ ИЗБРАННОЕ">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -46,7 +46,7 @@
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="e6x-ak-FM6" secondAttribute="trailing" constant="8" id="An3-U8-1mT"/>
-                                    <constraint firstItem="e6x-ak-FM6" firstAttribute="leading" secondItem="UB7-iF-GTj" secondAttribute="leading" constant="5" id="CHa-gu-ezp"/>
+                                    <constraint firstItem="e6x-ak-FM6" firstAttribute="leading" secondItem="UB7-iF-GTj" secondAttribute="leading" constant="8" id="CHa-gu-ezp"/>
                                     <constraint firstItem="e6x-ak-FM6" firstAttribute="top" secondItem="UB7-iF-GTj" secondAttribute="top" id="Zj7-FC-FMO"/>
                                     <constraint firstAttribute="height" constant="28" id="bwp-TG-nf6"/>
                                     <constraint firstAttribute="bottom" secondItem="e6x-ak-FM6" secondAttribute="bottom" id="iBO-6G-9X1"/>

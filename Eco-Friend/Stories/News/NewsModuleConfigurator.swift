@@ -25,6 +25,7 @@ class NewsModuleConfigurator: NSObject {
         let presenter = NewsPresenter()
         let interactor = NewsInteractor()
         let router = NewsRouter()
+        let dataManager: DataManagerProtocol = DataManager.shared
         
         viewController.presenter = presenter
         
@@ -33,6 +34,7 @@ class NewsModuleConfigurator: NSObject {
         presenter.router = router
 
         interactor.presenter = presenter
+        interactor.dataManager = dataManager
 
         router.view = viewController
     }

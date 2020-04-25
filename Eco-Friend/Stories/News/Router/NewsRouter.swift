@@ -19,4 +19,8 @@ class NewsRouter: NewsRouterInput {
         view.navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
     
+    func showFavourites() {
+        let vc = Navigation.getDetailScreen(storyboardName: "News", screenName: "newsFavourite")
+        view.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+    }
 }

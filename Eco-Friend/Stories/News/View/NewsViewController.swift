@@ -17,7 +17,6 @@ enum NewsScreenState {
 
 class NewsViewController: UIViewController, NewsViewInput, NewsViewFromCellInput {
     
-    var webView: WKWebView!
     var navigationBar: UINavigationBar!
     var presenter: NewsViewOutput!
     var screenState: NewsScreenState! {
@@ -38,41 +37,66 @@ class NewsViewController: UIViewController, NewsViewInput, NewsViewFromCellInput
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    let errorLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+    let errorButton =  UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
     //MARK: - Методы
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.requsetData()
         presenter.setupInitialState()
         configureNavigationController()
-        configureWebKit()
         configureTableView()
+        configureErrorUI()
         screenState = .waiting
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+
+    private func configureErrorUI() {
+        
+        
+        errorLabel.center = CGPoint(x: view.center.x, y: view.center.y - 200)
+        errorLabel.text = "Ошибка авторизации"
+        errorLabel.textColor = .black
+        errorLabel.textAlignment = .center
+        errorLabel.font = UIFont.systemFont(ofSize: 21, weight: .semibold)
+        errorLabel.isHidden = true
+        errorButton.setTitle("Очистить cookie", for: .normal)
+        errorButton.center = CGPoint(x: view.center.x, y: view.center.y - 100)
+        errorButton.layer.cornerRadius = 25
+        errorButton.backgroundColor = Global.Colors.lightGreen
+        errorButton.setTitleColor(.black, for: .normal)
+        errorButton.addTarget(self, action: #selector(clearCookie), for: .touchUpInside)
+        errorButton.isHidden = true
+        view.addSubview(errorLabel)
+        view.addSubview(errorButton)
+    }
+    
     private func configureWaitingState() {
+        
         navBarIsHidden(true)
         startAnimating()
-        webView.isHidden = true
         tableView.isHidden = true
     }
     
     private func configureSuccessState() {
+        
         navBarIsHidden(false)
         stopAnimating()
-        webView.isHidden = true
         tableView.isHidden = false
     }
     
     private func configureErrorState() {
+        
         navBarIsHidden(false)
         stopAnimating()
-        webView.isHidden = true
-        let errorView = UIView(frame: CGRect())
-        errorView.center = view.center
-        errorView.frame.size = CGSize(width: 100, height: 50)
-        errorView.backgroundColor = .red
-        view.addSubview(errorView)
+        errorLabel.isHidden = false
+        errorButton.isHidden = false
         tableView.isHidden = true
     }
 
@@ -86,7 +110,7 @@ class NewsViewController: UIViewController, NewsViewInput, NewsViewFromCellInput
         navigationBar.isTranslucent = false
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Новости", style: .plain, target: self, action: nil)
         navigationBar.topItem!.title = "Новости"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showFavouritesPage))
 
     }
     
@@ -96,19 +120,7 @@ class NewsViewController: UIViewController, NewsViewInput, NewsViewFromCellInput
             navigationController?.setStatusBar(backgroundColor: Global.Colors.lightGreen!)
         }
     }
-    
-    private func configureWebKit() {
-        webView = WKWebView()
-        webView.frame = view.frame
-        view.addSubview(webView)
-        webView.navigationDelegate = self
-        webView.isHidden = true
-        makeRequest(with: presenter.getAuthURL())
-    }
-    
-    private func makeRequest(with url: URL) {
-        webView.load(URLRequest(url: url))
-    }
+
     
     private func configureTableView() {
         tableView.delegate = self
@@ -127,47 +139,37 @@ class NewsViewController: UIViewController, NewsViewInput, NewsViewFromCellInput
         activityIndicator.stopAnimating()
     }
     
-    func updateView() {
+    func successUpdateView() {
         screenState = .success
         tableView.reloadData()
     }
     
+    func failureUpdateView() {
+        screenState = .error
+    }
+    
+    //MARK: - NewsViewFromCellInput
     func addToFavourites(at indexPath: IndexPath) {
+        presenter.addToFavourites(at: indexPath)
+        tableView.reloadData()
+    }
+    
+    func removeFromFavourites(at indexPath: IndexPath) {
+        presenter.removeFromFavourites(at: indexPath)
+        tableView.reloadData()
+    }
+    
+    //MARK: - OBJC
+    
+    @objc private func showFavouritesPage() {
+        presenter.showFavouritesPage()
+    }
+    
+    @objc private func clearCookie() {
+        presenter.clearCookie()
+        errorButton.isHidden = true
+        errorLabel.isHidden = true
         
-    }
-}
-
-//MARK: - WKNavigationDelegate
-extension NewsViewController: WKNavigationDelegate {
-
-   func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation:
-    WKNavigation!, withError error: Error) {
-        print(error.localizedDescription)
-        self.screenState = .error
-    }
-    
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation:
-    WKNavigation!) {
-        print("Strat to load")
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("Finish to load")
-        if webView.url?.absoluteString.range(of: "access_token") != nil {
-            if let token = webView.url?.absoluteString.slice(from: "access_token=", to: "&") {
-                presenter.requsetData(with: token)
-                self.screenState = .waiting
-            } else {
-                print("не получается")
-            }
-        } else if webView.url?.absoluteString.range(of: "error") != nil {
-            self.screenState = .error
-        } else {
-            webView.isHidden = false
-            if webView.url == URL(string: "https://api.vkontakte.ru/blank.html") {
-                 makeRequest(with: presenter.getAuthURL())
-            }
-        }
     }
 }
 

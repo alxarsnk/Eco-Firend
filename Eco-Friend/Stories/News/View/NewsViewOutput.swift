@@ -12,7 +12,7 @@ protocol NewsViewOutput: AnyObject {
     
     func setupInitialState()
     
-    func requsetData(with token: String)
+    func requsetData()
     
     func getPostsCount() -> Int
     
@@ -21,4 +21,12 @@ protocol NewsViewOutput: AnyObject {
     func showNewsDeatil(with model: NewsTableViewCellModel)
     
     func getAuthURL() -> URL
+    
+    func addToFavourites(at indexPath: IndexPath)
+    
+    func removeFromFavourites(at indexPath: IndexPath)
+    
+    func showFavouritesPage()
+    
+    func clearCookie() 
 }

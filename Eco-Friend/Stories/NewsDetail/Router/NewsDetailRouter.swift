@@ -14,5 +14,13 @@ class NewsDetailRouter: NewsDetailRouterInput {
     
     //MARK: - NewsDetailRouterInput
     
-    
+    func showCollection(withImagesURL imagesURL: [URL], at indexPath: IndexPath) {
+        
+        let vc = Navigation.getDetailScreen(storyboardName: "NewsDetail", screenName: "popUpCollection") as! PopUpController
+        vc.imagesURL = imagesURL
+        vc.indexPath = indexPath
+        vc.rootVieController = view
+        vc.modalPresentationStyle = .overCurrentContext
+        view.present(vc, animated: true, completion: nil)
+    }
 }

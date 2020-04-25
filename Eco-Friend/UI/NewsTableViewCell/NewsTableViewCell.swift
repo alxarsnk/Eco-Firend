@@ -13,9 +13,7 @@ class NewsTableViewCellModel {
     
     let text: String?
     let imagesURL: [URL]?
-    var images: [UIImage]? = []
     var isFavourite: Bool?
-    
     
     init(text: String?, imagesURL: [URL]?, isFavourite: Bool = false) {
         self.text = text
@@ -33,6 +31,9 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     var indexPath: IndexPath!
     var viewController: NewsViewFromCellInput!
+    var isFavourite: Bool!
+    var constraint: NSLayoutConstraint!
+    let transformer = SDImageResizingTransformer(size: CGSize(width: 300, height: 300), scaleMode: .aspectFit)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,6 +41,16 @@ class NewsTableViewCell: UITableViewCell {
         self.backgroundColor = UIColor(hex: "f2f2f2")
         self.cellContentView.layer.cornerRadius = 7
         favouriteButtonView.layer.cornerRadius = 14
+        postImageView.contentMode = .scaleAspectFit
+        postImageView.layer.cornerRadius = 7
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        shortTextLabel.text = nil
+        postImageView.image = nil
+        postImageView.sd_cancelCurrentImageLoad()
+        constraint = nil
     }
     
     private func configureLabel() {
@@ -48,20 +59,27 @@ class NewsTableViewCell: UITableViewCell {
     
     public func configure(with model: NewsTableViewCellModel) {
         
-        shortTextLabel.text = editted(model.text ?? "Новость не загрузилась")
-        guard let url = model.imagesURL?.first else { return }
-        postImageView.sd_setImage(with: url, completed: .none)
-        let newHeight = getNewHeight(from: postImageView.frame.size)
-        let constraint = NSLayoutConstraint(item: postImageView!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: newHeight)
-        postImageView.addConstraint(constraint)
-        toFavouriteButton.titleLabel?.text = model.isFavourite! ? "ДОБАВЛЕНО" : "+ ИЗБРАННОЕ"
+        let text = model.text ?? "Новость не загрузилась"
+        shortTextLabel.text = editted(text)
+        if let url = model.imagesURL?.first {
+            //postImageView.sd_setImage(with: url, completed: .none)
+            postImageView.sd_setImage(with: url, placeholderImage: nil, options: [], context: [SDWebImageContextOption.imageTransformer: transformer])
+        } else {
+            postImageView.image = nil
+        }
+       let favouriteButtonTitle = model.isFavourite! ? "В ИЗБРАННОМ" : "+ ИЗБРАННОЕ"
+       toFavouriteButton.setTitle(favouriteButtonTitle, for: .normal)
+       isFavourite = model.isFavourite
     }
     
     @IBAction func toFavouritesButtonPressed(_ sender: Any) {
-        toFavouriteButton.titleLabel?.text = "ДОБАВЛЕНО"
-        viewController.addToFavourites(at: indexPath)
+        
+        if isFavourite {
+            viewController.removeFromFavourites(at: indexPath)
+        } else {
+            viewController.addToFavourites(at: indexPath)
+        }
     }
-    
     
     private func getNewHeight(from size: CGSize) -> CGFloat {
         

@@ -49,5 +49,35 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="110.49107142857143"/>
         </scene>
+        <!--News Favourite View Controller-->
+        <scene sceneID="wyq-90-4V4">
+            <objects>
+                <viewController storyboardIdentifier="newsFavourite" id="Rts-c2-Pww" customClass="NewsFavouriteViewController" customModule="Eco_Friend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL0-EP-Oa7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-LF-cOu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ph7-c8-ZCw" firstAttribute="trailing" secondItem="Ajl-LF-cOu" secondAttribute="trailing" id="IEl-h3-Acf"/>
+                            <constraint firstItem="Ajl-LF-cOu" firstAttribute="top" secondItem="ph7-c8-ZCw" secondAttribute="top" id="N4h-lq-xTl"/>
+                            <constraint firstItem="ph7-c8-ZCw" firstAttribute="bottom" secondItem="Ajl-LF-cOu" secondAttribute="bottom" id="kMw-hw-cdz"/>
+                            <constraint firstItem="Ajl-LF-cOu" firstAttribute="leading" secondItem="ph7-c8-ZCw" secondAttribute="leading" id="w8B-ww-u2r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ph7-c8-ZCw"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ajl-LF-cOu" id="6ES-uC-DOZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yya-3M-Ehd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="110"/>
+        </scene>
     </scenes>
 </document>

@@ -11,4 +11,6 @@ import Foundation
 protocol NewsDetailViewOutput: AnyObject {
     
     func setupInitialState()
+    
+    func showCollection(withImagesURL imagesURL: [URL], at indexPath: IndexPath)
 }

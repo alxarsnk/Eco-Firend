@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import WebKit
 
 class NetworkService {
     
@@ -19,9 +20,9 @@ class NetworkService {
         vkProvider = MoyaProvider<VKApi>()
     }
     
-    public func getPosts(with token: String, completionHandler: @escaping (Data?, String? ) -> (Void)) {
+    public func getPosts(completionHandler: @escaping (Data?, String? ) -> (Void)) {
         
-        let vkRequestModel = VKRequestModel(token: token, groupId: "-96281069",count: 200, apiVersion: "5.103")
+        let vkRequestModel = VKRequestModel(token: "3a940e313a940e313a940e31203afa80db33a943a940e3167673c811df6ef549d2085ee", groupId: "-96281069",count: 200, apiVersion: "5.103")
     
         vkProvider.request(.getPosts(model: vkRequestModel)) { (result) in
             switch result {
@@ -35,5 +36,15 @@ class NetworkService {
     
     public func getAuthURL() -> URL {
         return authURL
+    }
+    
+    static func clearCookie() {
+        
+        let dataStore = WKWebsiteDataStore.default()
+        dataStore.httpCookieStore.getAllCookies({ (cookies) in
+            for cookie in cookies {
+                dataStore.httpCookieStore.delete(cookie, completionHandler: nil)
+            }
+        })
     }
 }
