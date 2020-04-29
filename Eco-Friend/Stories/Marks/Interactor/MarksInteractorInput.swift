@@ -10,4 +10,9 @@ import Foundation
 
 protocol MarksInteractorInput: AnyObject {
     
+    func getMark(at index: Int) -> Mark
+    
+    func getMarksCount() -> Int
+    
+    func fetchMarks()
 }

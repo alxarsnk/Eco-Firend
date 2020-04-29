@@ -23,4 +23,24 @@ class MarksPresenter: MarksViewOutput, MarksInteractorOutput {
     func showMarksDetail() {
         router.showMarksDetail()
     }
+    
+    func getMark(at index: Int) -> Mark {
+        return interactor.getMark(at: index)
+    }
+    
+    func getMarksCount() -> Int {
+        return interactor.getMarksCount()
+    }
+    
+    func fetchMarks() {
+        interactor.fetchMarks()
+    }
+     
+    func successful() {
+        view.updateView()
+    }
+    
+    func unsucessful(errorString: String) {
+        view.showError(errorString: errorString)
+    }
 }

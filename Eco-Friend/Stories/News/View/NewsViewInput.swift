@@ -24,6 +24,8 @@ protocol NewsViewFromCellInput: AnyObject {
     func addToFavourites(at indexPath: IndexPath)
     
     func removeFromFavourites(at indexPath: IndexPath)
+    
+    func reloadRow(at indexPaths: [IndexPath])
 }
 
 extension NewsViewFromCellInput {

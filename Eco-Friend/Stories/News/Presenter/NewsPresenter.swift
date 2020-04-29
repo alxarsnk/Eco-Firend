@@ -32,10 +32,6 @@ class NewsPresenter: NewsViewOutput, NewsInteractorOutput {
         return interactor.getCellModel(at: index)
     }
     
-    func getAuthURL() -> URL {
-        return interactor.getAuthURL()
-    }
-    
     func addToFavourites(at indexPath: IndexPath) {
         interactor.addToFavourites(at: indexPath)
     }

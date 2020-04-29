@@ -159,6 +159,10 @@ class NewsViewController: UIViewController, NewsViewInput, NewsViewFromCellInput
         tableView.reloadData()
     }
     
+    func reloadRow(at indexPaths: [IndexPath]) {
+        tableView.reloadRows(at: indexPaths, with: .fade)
+    }
+    
     //MARK: - OBJC
     
     @objc private func showFavouritesPage() {

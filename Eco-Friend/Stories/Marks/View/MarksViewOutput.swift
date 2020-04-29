@@ -13,4 +13,10 @@ protocol MarksViewOutput: AnyObject {
     func setupInitialState()
     
     func showMarksDetail()
+    
+    func getMark(at index: Int) -> Mark
+    
+    func getMarksCount() -> Int
+    
+    func fetchMarks()
 }

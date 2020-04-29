@@ -16,8 +16,6 @@ protocol NewsInteractorInput: AnyObject {
     
     func getCellModel(at index: Int) -> NewsTableViewCellModel
     
-    func getAuthURL() -> URL
-    
     func addToFavourites(at indexPath: IndexPath)
     
     func removeFromFavourites(at indexPath: IndexPath)

@@ -31,6 +31,8 @@ class TrashViewController: UIViewController, TrashViewInput {
         tableView.dataSource = self
         let nib = UINib(nibName: "TrashTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "trashTableViewCell")
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = Global.Colors.lightGray
     }
     
     private func configureNavigationBar() {
@@ -47,17 +49,19 @@ class TrashViewController: UIViewController, TrashViewInput {
     }
     //MARK: - TrashViewInput
 }
-
+var dataSource: [String] {
+    return ["Стекло", "Бумага", "Батарейки", "Картон", "Жестяные изделия", "Пластик", "Органические отходы"]
+}
 extension TrashViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "trashTableViewCell", for: indexPath) as! TrashTableViewCell
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.nameLabel?.text = dataSource[indexPath.row]
         return cell
     }
     

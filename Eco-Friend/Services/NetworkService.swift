@@ -13,11 +13,12 @@ import WebKit
 class NetworkService {
     
     let vkProvider: MoyaProvider<VKApi>!
-    private var authURL: URL = URL(string: "https://oauth.vk.com/authorize?client_id=7245546&scope=video&redirect_uri=http://api.vkontakte.ru/blank.html&display=touch&response_type=token")!
+    let jsonProvider: MoyaProvider<JSONApi>!
     
     init() {
 
         vkProvider = MoyaProvider<VKApi>()
+        jsonProvider = MoyaProvider<JSONApi>()
     }
     
     public func getPosts(completionHandler: @escaping (Data?, String? ) -> (Void)) {
@@ -34,8 +35,15 @@ class NetworkService {
         }
     }
     
-    public func getAuthURL() -> URL {
-        return authURL
+    public func getMarks(completionHandler: @escaping (Data?, String? ) -> (Void)) {
+        jsonProvider.request(.getMarks) { (result) in
+            switch result {
+            case .success(let responce):
+                completionHandler(responce.data, nil)
+            case .failure(let error):
+                completionHandler(nil, error.localizedDescription)
+            }
+        }
     }
     
     static func clearCookie() {

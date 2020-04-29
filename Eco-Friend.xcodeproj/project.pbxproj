@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B0C22EE2402A2EC00D7F6A0 /* VKResponce.json in Sources */ = {isa = PBXBuildFile; fileRef = 1B0C22ED2402A2EC00D7F6A0 /* VKResponce.json */; };
 		1B0C22F62402D36700D7F6A0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0C22F42402D36700D7F6A0 /* NewsTableViewCell.swift */; };
 		1B0C22F72402D36700D7F6A0 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0C22F52402D36700D7F6A0 /* NewsTableViewCell.xib */; };
 		1B2F144D241A7EFF00E28DCE /* MarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F144B241A7EFF00E28DCE /* MarksTableViewCell.swift */; };
@@ -77,6 +76,7 @@
 		1BADE9D1244A53BA00AB8D5B /* NewsDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE9CF244A53BA00AB8D5B /* NewsDetailCollectionViewCell.swift */; };
 		1BADE9D2244A53BA00AB8D5B /* NewsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BADE9D0244A53BA00AB8D5B /* NewsDetailCollectionViewCell.xib */; };
 		1BADE9D4244A580600AB8D5B /* PopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE9D3244A580600AB8D5B /* PopUpController.swift */; };
+		1BB45A322459BE290037956F /* JSONApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB45A312459BE290037956F /* JSONApi.swift */; };
 		1BDB7DBD23FEC2370069F699 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7DB023FEC2370069F699 /* MainPresenter.swift */; };
 		1BDB7DBE23FEC2370069F699 /* MainModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7DB123FEC2370069F699 /* MainModuleConfigurator.swift */; };
 		1BDB7DBF23FEC2370069F699 /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7DB323FEC2370069F699 /* MainViewInput.swift */; };
@@ -146,7 +146,6 @@
 
 /* Begin PBXFileReference section */
 		12B07351DB6A2476786D79AB /* libPods-Eco-Friend-Eco-FriendUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eco-Friend-Eco-FriendUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B0C22ED2402A2EC00D7F6A0 /* VKResponce.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VKResponce.json; sourceTree = "<group>"; };
 		1B0C22F42402D36700D7F6A0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		1B0C22F52402D36700D7F6A0 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		1B2F144B241A7EFF00E28DCE /* MarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarksTableViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +215,7 @@
 		1BADE9CF244A53BA00AB8D5B /* NewsDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		1BADE9D0244A53BA00AB8D5B /* NewsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		1BADE9D3244A580600AB8D5B /* PopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpController.swift; sourceTree = "<group>"; };
+		1BB45A312459BE290037956F /* JSONApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONApi.swift; sourceTree = "<group>"; };
 		1BDB7DB023FEC2370069F699 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		1BDB7DB123FEC2370069F699 /* MainModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleConfigurator.swift; sourceTree = "<group>"; };
 		1BDB7DB323FEC2370069F699 /* MainViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
@@ -754,9 +754,9 @@
 		1BDB7DFF23FEC9E70069F699 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				1BDB7E0223FEC9E70069F699 /* MarksInteractor.swift */,
 				1BDB7E0023FEC9E70069F699 /* MarksInteractorOutput.swift */,
 				1BDB7E0123FEC9E70069F699 /* MarksInteractorInput.swift */,
-				1BDB7E0223FEC9E70069F699 /* MarksInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -773,7 +773,7 @@
 		1BDCFA2624003FBA001F7B01 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1BDCFA29240046BE001F7B01 /* VKApi */,
+				1BDCFA29240046BE001F7B01 /* Api */,
 				1BDCFA2724003FD9001F7B01 /* NetworkService.swift */,
 				1BA9ED712448DB9900A78CE4 /* DataManager.swift */,
 				1B77968B2448FFED003BBAFB /* DatabaseService.swift */,
@@ -781,12 +781,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		1BDCFA29240046BE001F7B01 /* VKApi */ = {
+		1BDCFA29240046BE001F7B01 /* Api */ = {
 			isa = PBXGroup;
 			children = (
 				1BDCFA2A240046CB001F7B01 /* VKApi.swift */,
+				1BB45A312459BE290037956F /* JSONApi.swift */,
 			);
-			path = VKApi;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		1BE1960423FEDF7000B5EB10 /* TabBar */ = {
@@ -809,7 +810,6 @@
 		1BF67E14239D149900A69134 = {
 			isa = PBXGroup;
 			children = (
-				1B0C22ED2402A2EC00D7F6A0 /* VKResponce.json */,
 				1BF67E1F239D149900A69134 /* Eco-Friend */,
 				1BF67E39239D149F00A69134 /* Eco-FriendTests */,
 				1BF67E44239D14A000A69134 /* Eco-FriendUITests */,
@@ -1116,7 +1116,6 @@
 				1B2F1466241A858900E28DCE /* MarksDetailViewInput.swift in Sources */,
 				1BDB7DDF23FEC97E0069F699 /* NewsModuleConfigurator.swift in Sources */,
 				1B77C5382420A3C500364395 /* TrashDetailViewController.swift in Sources */,
-				1B0C22EE2402A2EC00D7F6A0 /* VKResponce.json in Sources */,
 				1BDB7E1523FEC9E70069F699 /* MarksInteractorOutput.swift in Sources */,
 				1B2F1462241A858900E28DCE /* MarksDetailModuleConfigurator.swift in Sources */,
 				1B77C5392420A3C500364395 /* TrashDetailViewOutput.swift in Sources */,
@@ -1187,6 +1186,7 @@
 				1B8025FD2400374100974CF8 /* TrashRouter.swift in Sources */,
 				1B89AAB22435083F00236199 /* NewsDetailViewController.swift in Sources */,
 				1BDB7E1323FEC9E70069F699 /* MarksViewInput.swift in Sources */,
+				1BB45A322459BE290037956F /* JSONApi.swift in Sources */,
 				1BDB7DE423FEC97E0069F699 /* NewsRouterInput.swift in Sources */,
 				1B77C53D2420A3C500364395 /* TrashDetailRouter.swift in Sources */,
 				1B8025F62400374100974CF8 /* TrashModuleConfigurator.swift in Sources */,

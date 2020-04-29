@@ -19,7 +19,7 @@ class MapViewController: UIViewController, MapViewInput {
         super.viewDidLoad()
         
         presenter.setupInitialState()
-        
+        webkitView.backgroundColor = .white
         webkitView.load(URLRequest(url: URL(string: "https://recyclemap.ru")!))
         self.navigationController?.navigationBar.isHidden = true
     }

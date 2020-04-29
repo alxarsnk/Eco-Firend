@@ -10,5 +10,7 @@ import Foundation
 
 protocol MarksInteractorOutput: AnyObject {
     
-   
+    func successful()
+    
+    func unsucessful(errorString: String)
 }

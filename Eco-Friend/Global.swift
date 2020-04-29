@@ -23,5 +23,6 @@ class Global {
     
     public struct Colors {
         static let lightGreen = UIColor(hex: "82DC9B")
+        static let lightGray = UIColor(hex: "f2f2f2")
     }
 }

@@ -63,8 +63,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         contentView.layer.shadowOpacity = 0.4
         contentView.layer.shadowOffset = .zero
         contentView.layer.shadowRadius = 3
-        contentView.layer.shouldRasterize = true
-
         
         let screenTag = ScreenTags(rawValue: indexPath.row)!
         var title: String = ""

@@ -28,7 +28,7 @@ class NewsFavouriteViewController: UIViewController, NewsViewFromCellInput {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor(hex: "f2f2f2")
+        tableView.backgroundColor = Global.Colors.lightGray
         tableView.separatorStyle = .none
         let nib = UINib(nibName: "NewsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "newsTableViewCell")
@@ -37,6 +37,10 @@ class NewsFavouriteViewController: UIViewController, NewsViewFromCellInput {
     func removeFromFavourites(at indexPath: IndexPath) {
         dataManager.removePostFromFavourites(at: indexPath.row)
         tableView.reloadData()
+    }
+    
+    func reloadRow(at indexPaths: [IndexPath]) {
+        tableView.reloadRows(at: indexPaths, with: .fade)
     }
     
 }

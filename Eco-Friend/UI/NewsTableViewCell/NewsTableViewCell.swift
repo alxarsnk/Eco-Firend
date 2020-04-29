@@ -62,8 +62,9 @@ class NewsTableViewCell: UITableViewCell {
         let text = model.text ?? "Новость не загрузилась"
         shortTextLabel.text = editted(text)
         if let url = model.imagesURL?.first {
-            //postImageView.sd_setImage(with: url, completed: .none)
-            postImageView.sd_setImage(with: url, placeholderImage: nil, options: [], context: [SDWebImageContextOption.imageTransformer: transformer])
+            postImageView.sd_setImage(with: url, placeholderImage: nil, options: [], context: [SDWebImageContextOption.imageTransformer: transformer], progress: nil) { [weak self] (image, error, cache, url) in
+                
+            }
         } else {
             postImageView.image = nil
         }

@@ -63,10 +63,6 @@ class NewsInteractor: NewsInteractorInput {
         return dataManager.getPost(at: index)
     }
     
-    func getAuthURL() -> URL {
-        return Global.Services.networkService.getAuthURL()
-    }
-    
     func addToFavourites(at indexPath: IndexPath) {
         dataManager.addPostToFavourites(at: indexPath.row)
     }
