@@ -14,8 +14,9 @@ class MarksRouter: MarksRouterInput {
     
     //MARK: - MarksRouterInput
     
-    func showMarksDetail() {
-        let vc = Navigation.getDetailScreen(storyboardName: "MarksDetail", screenName: "marksDetailViewController")
+    func showMarksDetail(with model: Mark) {
+        let vc = Navigation.getDetailScreen(storyboardName: "MarksDetail", screenName: "marksDetailViewController") as! MarksDetailViewController
+        vc.model = model
         view.navigationController?.pushViewController(vc, animated: true)
     }
     

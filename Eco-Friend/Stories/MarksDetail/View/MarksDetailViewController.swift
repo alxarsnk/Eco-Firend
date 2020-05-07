@@ -9,9 +9,12 @@
 import UIKit
 
 class MarksDetailViewController: UIViewController, MarksDetailViewInput {
-    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     var presenter: MarksDetailViewOutput!
     var navigationBar: UINavigationBar!
+    var model: Mark!
     
     //MARK: - Методы
     
@@ -20,11 +23,13 @@ class MarksDetailViewController: UIViewController, MarksDetailViewInput {
         
         presenter.setupInitialState()
         configureNavifationBar()
+        imageView.sd_setImage(with: URL(string: model.imageURL), completed: nil)
+        textLabel.text = model.text
     }
     
     private func configureNavifationBar() {
         navigationBar = self.navigationController?.navigationBar
-        self.title = "Название"
+        self.title = model.id
     }
    
     //MARK: - MarksDetailViewInput

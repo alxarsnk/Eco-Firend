@@ -10,6 +10,10 @@ target 'Eco-Friend' do
 	pod 'SDWebImage'
 	pod 'Realm'
 	pod 'RealmSwift'
+	pod 'Firebase/Storage'
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
   target 'Eco-FriendTests' do
     inherit! :search_paths
     # Pods for testing

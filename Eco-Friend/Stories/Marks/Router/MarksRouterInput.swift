@@ -10,5 +10,5 @@ import Foundation
 
 protocol MarksRouterInput: AnyObject {
     
-    func showMarksDetail()
+    func showMarksDetail(with model: Mark)
 }

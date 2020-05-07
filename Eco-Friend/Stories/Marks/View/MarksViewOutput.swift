@@ -12,7 +12,7 @@ protocol MarksViewOutput: AnyObject {
     
     func setupInitialState()
     
-    func showMarksDetail()
+    func showMarksDetail(with model: Mark)
     
     func getMark(at index: Int) -> Mark
     

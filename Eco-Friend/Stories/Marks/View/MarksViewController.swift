@@ -108,6 +108,7 @@ extension MarksViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        presenter.showMarksDetail()
+        let cellModel = presenter.getMark(at: indexPath.row)
+        presenter.showMarksDetail(with: cellModel)
     }
 }

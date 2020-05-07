@@ -20,8 +20,8 @@ class MarksPresenter: MarksViewOutput, MarksInteractorOutput {
         
     }
     
-    func showMarksDetail() {
-        router.showMarksDetail()
+    func showMarksDetail(with model: Mark) {
+        router.showMarksDetail(with: model)
     }
     
     func getMark(at index: Int) -> Mark {

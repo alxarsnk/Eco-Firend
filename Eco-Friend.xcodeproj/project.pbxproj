@@ -22,6 +22,7 @@
 		1B2F146A241A858900E28DCE /* MarksDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F1460241A858900E28DCE /* MarksDetailRouter.swift */; };
 		1B2F146B241A858900E28DCE /* MarksDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F1461241A858900E28DCE /* MarksDetailRouterInput.swift */; };
 		1B2F146D241A864A00E28DCE /* MarksDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2F146C241A864A00E28DCE /* MarksDetail.storyboard */; };
+		1B60B23F24645D450080E413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B60B23E24645D450080E413 /* GoogleService-Info.plist */; };
 		1B77968C2448FFED003BBAFB /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77968B2448FFED003BBAFB /* DatabaseService.swift */; };
 		1B77C5212420A13900364395 /* TrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77C51F2420A13900364395 /* TrashTableViewCell.swift */; };
 		1B77C5222420A13900364395 /* TrashTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B77C5202420A13900364395 /* TrashTableViewCell.xib */; };
@@ -161,6 +162,7 @@
 		1B2F1460241A858900E28DCE /* MarksDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarksDetailRouter.swift; sourceTree = "<group>"; };
 		1B2F1461241A858900E28DCE /* MarksDetailRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarksDetailRouterInput.swift; sourceTree = "<group>"; };
 		1B2F146C241A864A00E28DCE /* MarksDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarksDetail.storyboard; sourceTree = "<group>"; };
+		1B60B23E24645D450080E413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B77968B2448FFED003BBAFB /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		1B77C51F2420A13900364395 /* TrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashTableViewCell.swift; sourceTree = "<group>"; };
 		1B77C5202420A13900364395 /* TrashTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashTableViewCell.xib; sourceTree = "<group>"; };
@@ -842,6 +844,7 @@
 				1BF67E22239D149900A69134 /* SceneDelegate.swift */,
 				1BF67E2C239D149F00A69134 /* Assets.xcassets */,
 				1BF67E2E239D149F00A69134 /* LaunchScreen.storyboard */,
+				1B60B23E24645D450080E413 /* GoogleService-Info.plist */,
 				1BF67E31239D149F00A69134 /* Info.plist */,
 				1BF67E29239D149900A69134 /* Eco_Friend.xcdatamodeld */,
 			);
@@ -900,6 +903,7 @@
 				1BF67E19239D149900A69134 /* Sources */,
 				1BF67E1A239D149900A69134 /* Frameworks */,
 				1BF67E1B239D149900A69134 /* Resources */,
+				42AEC100F2B0A22C653FE1D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -937,6 +941,7 @@
 				1BF67E3D239D14A000A69134 /* Sources */,
 				1BF67E3E239D14A000A69134 /* Frameworks */,
 				1BF67E3F239D14A000A69134 /* Resources */,
+				9D89DE7199D1F3BE6773EF58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1006,6 +1011,7 @@
 				1B77C5402420A3E300364395 /* TrashDetail.storyboard in Resources */,
 				1B2F146D241A864A00E28DCE /* MarksDetail.storyboard in Resources */,
 				1BDB7E1C23FECA440069F699 /* News.storyboard in Resources */,
+				1B60B23F24645D450080E413 /* GoogleService-Info.plist in Resources */,
 				1B0C22F72402D36700D7F6A0 /* NewsTableViewCell.xib in Resources */,
 				1BF67E2D239D149F00A69134 /* Assets.xcassets in Resources */,
 				1B8025E32400002E00974CF8 /* Marks.storyboard in Resources */,
@@ -1053,6 +1059,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		42AEC100F2B0A22C653FE1D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		841BA6EAD3BBE7EEF0CB5E97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1073,6 +1096,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D89DE7199D1F3BE6773EF58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC3275EFBD2A25FC3EAF733C /* [CP] Check Pods Manifest.lock */ = {

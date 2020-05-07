@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,9 +14,48 @@
                     <view key="view" contentMode="scaleToFill" id="h1n-aH-fSp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xA-mw-NX7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-rl-9Ok">
+                                        <rect key="frame" x="16" y="20" width="382" height="327"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOME SOME SOME SOME" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-B1-xyS">
+                                        <rect key="frame" x="16" y="372" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RXX-B1-xyS" secondAttribute="bottom" constant="16" id="APK-VT-99w"/>
+                                    <constraint firstAttribute="trailing" secondItem="5lU-rl-9Ok" secondAttribute="trailing" constant="16" id="UPe-Yj-GfV"/>
+                                    <constraint firstItem="RXX-B1-xyS" firstAttribute="top" secondItem="5lU-rl-9Ok" secondAttribute="bottom" constant="25" id="YD9-rp-9Kq"/>
+                                    <constraint firstItem="5lU-rl-9Ok" firstAttribute="top" secondItem="4xA-mw-NX7" secondAttribute="top" constant="20" symbolic="YES" id="o0v-Oc-DvX"/>
+                                    <constraint firstItem="5lU-rl-9Ok" firstAttribute="leading" secondItem="4xA-mw-NX7" secondAttribute="leading" constant="16" id="ssS-lr-oHp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5lU-rl-9Ok" firstAttribute="height" secondItem="MHA-or-Sg2" secondAttribute="height" multiplier="0.4" id="66P-Z8-Xa6"/>
+                            <constraint firstItem="MHA-or-Sg2" firstAttribute="trailing" secondItem="5lU-rl-9Ok" secondAttribute="trailing" constant="16" id="GXl-Im-fJT"/>
+                            <constraint firstItem="4xA-mw-NX7" firstAttribute="leading" secondItem="MHA-or-Sg2" secondAttribute="leading" id="Qkz-4Y-vgT"/>
+                            <constraint firstItem="MHA-or-Sg2" firstAttribute="trailing" secondItem="4xA-mw-NX7" secondAttribute="trailing" id="YDh-Of-y01"/>
+                            <constraint firstItem="RXX-B1-xyS" firstAttribute="leading" secondItem="MHA-or-Sg2" secondAttribute="leading" constant="16" id="ZmT-kE-GTl"/>
+                            <constraint firstItem="MHA-or-Sg2" firstAttribute="bottom" secondItem="4xA-mw-NX7" secondAttribute="bottom" id="dHb-xG-ek1"/>
+                            <constraint firstItem="5lU-rl-9Ok" firstAttribute="leading" secondItem="MHA-or-Sg2" secondAttribute="leading" constant="16" id="gkR-pI-VEu"/>
+                            <constraint firstItem="MHA-or-Sg2" firstAttribute="trailing" secondItem="RXX-B1-xyS" secondAttribute="trailing" constant="16" id="h5Z-Ak-73H"/>
+                            <constraint firstItem="4xA-mw-NX7" firstAttribute="top" secondItem="MHA-or-Sg2" secondAttribute="top" id="teq-59-ceT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MHA-or-Sg2"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="5lU-rl-9Ok" id="Y4N-gl-1G0"/>
+                        <outlet property="scrollView" destination="4xA-mw-NX7" id="oAx-su-Gck"/>
+                        <outlet property="textLabel" destination="RXX-B1-xyS" id="K9o-Ry-lE5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mb-ya-cYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="aEG-iZ-Vwd" customClass="MarksDetailModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">
@@ -25,7 +64,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-186" y="-93"/>
+            <point key="canvasLocation" x="-186.95652173913044" y="-93.080357142857139"/>
         </scene>
     </scenes>
 </document>
