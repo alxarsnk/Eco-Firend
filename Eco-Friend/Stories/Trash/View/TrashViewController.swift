@@ -11,6 +11,7 @@ import UIKit
 class TrashViewController: UIViewController, TrashViewInput {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var presenter: TrashViewOutput!
     var navigationBar: UINavigationBar!
@@ -20,9 +21,16 @@ class TrashViewController: UIViewController, TrashViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startLoading()
         presenter.setupInitialState()
         configureTableView()
         configureNavigationBar()
+    }
+    
+    private func startLoading() {
+        
+        presenter.loadTrash()
+        activityIndicator.startAnimating()
     }
     
     private func configureTableView() {
@@ -33,40 +41,76 @@ class TrashViewController: UIViewController, TrashViewInput {
         tableView.register(nib, forCellReuseIdentifier: "trashTableViewCell")
         tableView.separatorStyle = .none
         tableView.backgroundColor = Global.Colors.lightGray
+        tableView.isHidden = false
     }
     
     private func configureNavigationBar() {
         
+        navigationController?.setStatusBar(backgroundColor: Global.Colors.lightGray!)
         navigationBar = self.navigationController?.navigationBar
         navigationBar.prefersLargeTitles = true
         navigationBar.backgroundColor = Global.Colors.lightGreen
         navigationBar.barTintColor = Global.Colors.lightGreen
         navigationBar.tintColor = .black
-        navigationController?.setStatusBar(backgroundColor: Global.Colors.lightGreen!)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Сортировка", style: .plain, target: nil, action: nil)
         navigationBar.isTranslucent = false
         navigationBar.topItem!.title = "Сортировка мусора"
+        navBarIsHidden(true)
+    }
+    
+    private func navBarIsHidden(_ isHidden: Bool) {
+        
+        navigationBar.isHidden = isHidden
+        if !isHidden {
+            navigationController?.setStatusBar(backgroundColor: Global.Colors.lightGreen!)
+        }
     }
     //MARK: - TrashViewInput
+    
+    func updateView() {
+        
+        tableView.isHidden = false
+        navBarIsHidden(false)
+        activityIndicator.stopAnimating()
+        tableView.reloadData()
+    }
+    
+    func reloadRows(at indexPaths: [IndexPath]) {
+        
+        tableView.reloadRows(at: indexPaths, with: .fade)
+    }
+
+    
+    func showError(errorString: String) {
+        
+        activityIndicator.stopAnimating()
+        let alertController = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
+        let alerAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+            self.startLoading()
+        }
+        alertController.addAction(alerAction)
+        present(alertController, animated: true, completion: nil)
+        
+    }
 }
-var dataSource: [String] {
-    return ["Стекло", "Бумага", "Батарейки", "Картон", "Жестяные изделия", "Пластик", "Органические отходы"]
-}
+
 extension TrashViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return presenter.getTrashCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "trashTableViewCell", for: indexPath) as! TrashTableViewCell
-        cell.nameLabel?.text = dataSource[indexPath.row]
+        let cellModel = presenter.getTrash(at: indexPath.row)
+        cell.nameLabel?.text = cellModel.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter.showTrashDetail()
+        let cellModel = presenter.getTrash(at: indexPath.row)
+        presenter.showTrashDetail(withModel: cellModel)
     }
 }

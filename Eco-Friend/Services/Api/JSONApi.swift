@@ -12,7 +12,11 @@ import Alamofire
 
 enum JSONApi {
     case getMarks
+    case getTrash
 }
+
+///https://api.npoint.io/2c2913b224b572c1b83a
+///https://api.npoint.io/049c845c46a55f81c9d7
 
 extension JSONApi: TargetType {
     var baseURL: URL {
@@ -20,7 +24,13 @@ extension JSONApi: TargetType {
     }
     
     var path: String {
-        return "2c2913b224b572c1b83a"
+        switch self {
+        case .getMarks:
+            return "2c2913b224b572c1b83a"
+        case.getTrash:
+            return "049c845c46a55f81c9d7"
+        }
+        
     }
     
     var method: Alamofire.HTTPMethod  {
@@ -38,6 +48,4 @@ extension JSONApi: TargetType {
     var headers: [String : String]? {
         return nil
     }
-    
-    
 }

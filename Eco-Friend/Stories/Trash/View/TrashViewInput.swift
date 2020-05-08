@@ -10,4 +10,9 @@ import Foundation
 
 protocol TrashViewInput: AnyObject {
     
+    func updateView()
+    
+    func showError(errorString: String)
+    
+    func reloadRows(at indexPaths: [IndexPath])
 }

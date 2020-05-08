@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -78,6 +78,7 @@
 		1BADE9D2244A53BA00AB8D5B /* NewsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BADE9D0244A53BA00AB8D5B /* NewsDetailCollectionViewCell.xib */; };
 		1BADE9D4244A580600AB8D5B /* PopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE9D3244A580600AB8D5B /* PopUpController.swift */; };
 		1BB45A322459BE290037956F /* JSONApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB45A312459BE290037956F /* JSONApi.swift */; };
+		1BB86ED02464614F0011D00F /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB86ECF2464614F0011D00F /* FirebaseService.swift */; };
 		1BDB7DBD23FEC2370069F699 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7DB023FEC2370069F699 /* MainPresenter.swift */; };
 		1BDB7DBE23FEC2370069F699 /* MainModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7DB123FEC2370069F699 /* MainModuleConfigurator.swift */; };
 		1BDB7DBF23FEC2370069F699 /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7DB323FEC2370069F699 /* MainViewInput.swift */; };
@@ -123,9 +124,9 @@
 		1BF67E30239D149F00A69134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF67E2E239D149F00A69134 /* LaunchScreen.storyboard */; };
 		1BF67E3B239D149F00A69134 /* Eco_FriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF67E3A239D149F00A69134 /* Eco_FriendTests.swift */; };
 		1BF67E46239D14A000A69134 /* Eco_FriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF67E45239D14A000A69134 /* Eco_FriendUITests.swift */; };
-		257A5D9A4FBE7D475B685B4B /* libPods-Eco-Friend-Eco-FriendUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B07351DB6A2476786D79AB /* libPods-Eco-Friend-Eco-FriendUITests.a */; };
-		B2C4A3EFB82EBC4EBADC18DE /* libPods-Eco-FriendTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F1CA38B15165908EC844E8 /* libPods-Eco-FriendTests.a */; };
-		CAE0EABE24F7A1E6C7E6D683 /* libPods-Eco-Friend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F88D6F9BF25C14770CA9F1 /* libPods-Eco-Friend.a */; };
+		2AD98D8112B23B1C0CD2758A /* Pods_Eco_FriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E4F7022FB425D7069EE8C9 /* Pods_Eco_FriendTests.framework */; };
+		C0110468734A1C76F31204AA /* Pods_Eco_Friend_Eco_FriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5058BFEB199DDE4A0BEFBE96 /* Pods_Eco_Friend_Eco_FriendUITests.framework */; };
+		ECC5222244B6E8AE246C1A57 /* Pods_Eco_Friend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E52C1FCA100CC854DB3151 /* Pods_Eco_Friend.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +147,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12B07351DB6A2476786D79AB /* libPods-Eco-Friend-Eco-FriendUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eco-Friend-Eco-FriendUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0C22F42402D36700D7F6A0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		1B0C22F52402D36700D7F6A0 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		1B2F144B241A7EFF00E28DCE /* MarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarksTableViewCell.swift; sourceTree = "<group>"; };
@@ -218,6 +218,7 @@
 		1BADE9D0244A53BA00AB8D5B /* NewsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		1BADE9D3244A580600AB8D5B /* PopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpController.swift; sourceTree = "<group>"; };
 		1BB45A312459BE290037956F /* JSONApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONApi.swift; sourceTree = "<group>"; };
+		1BB86ECF2464614F0011D00F /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		1BDB7DB023FEC2370069F699 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		1BDB7DB123FEC2370069F699 /* MainModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleConfigurator.swift; sourceTree = "<group>"; };
 		1BDB7DB323FEC2370069F699 /* MainViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
@@ -270,13 +271,14 @@
 		1BF67E45239D14A000A69134 /* Eco_FriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eco_FriendUITests.swift; sourceTree = "<group>"; };
 		1BF67E47239D14A000A69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AA644D7FC5652BB925AA662 /* Pods-Eco-Friend-Eco-FriendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco-Friend-Eco-FriendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		75F88D6F9BF25C14770CA9F1 /* libPods-Eco-Friend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eco-Friend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5058BFEB199DDE4A0BEFBE96 /* Pods_Eco_Friend_Eco_FriendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eco_Friend_Eco_FriendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E52C1FCA100CC854DB3151 /* Pods_Eco_Friend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eco_Friend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A463D6D51EC89371AC2D89C /* Pods-Eco-Friend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco-Friend.debug.xcconfig"; path = "Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend.debug.xcconfig"; sourceTree = "<group>"; };
 		BC53A10957F656391D7A90BD /* Pods-Eco-Friend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco-Friend.release.xcconfig"; path = "Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend.release.xcconfig"; sourceTree = "<group>"; };
 		C32399EF2679C46DE9A780E4 /* Pods-Eco-FriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco-FriendTests.debug.xcconfig"; path = "Target Support Files/Pods-Eco-FriendTests/Pods-Eco-FriendTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6E4F7022FB425D7069EE8C9 /* Pods_Eco_FriendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eco_FriendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5502A82785604E3DE7D57B5 /* Pods-Eco-FriendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco-FriendTests.release.xcconfig"; path = "Target Support Files/Pods-Eco-FriendTests/Pods-Eco-FriendTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9E0458C7FA6D08C369C0345 /* Pods-Eco-Friend-Eco-FriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco-Friend-Eco-FriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F5F1CA38B15165908EC844E8 /* libPods-Eco-FriendTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eco-FriendTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,7 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAE0EABE24F7A1E6C7E6D683 /* libPods-Eco-Friend.a in Frameworks */,
+				ECC5222244B6E8AE246C1A57 /* Pods_Eco_Friend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2C4A3EFB82EBC4EBADC18DE /* libPods-Eco-FriendTests.a in Frameworks */,
+				2AD98D8112B23B1C0CD2758A /* Pods_Eco_FriendTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257A5D9A4FBE7D475B685B4B /* libPods-Eco-Friend-Eco-FriendUITests.a in Frameworks */,
+				C0110468734A1C76F31204AA /* Pods_Eco_Friend_Eco_FriendUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +439,8 @@
 		1B8025E62400374100974CF8 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
-				1B8025E72400374100974CF8 /* Presenter */,
 				1B8025E92400374100974CF8 /* TrashModuleConfigurator.swift */,
+				1B8025E72400374100974CF8 /* Presenter */,
 				1B8025EA2400374100974CF8 /* View */,
 				1B8025EE2400374100974CF8 /* Interactor */,
 				1B8025F22400374100974CF8 /* Router */,
@@ -779,6 +781,7 @@
 				1BDCFA2724003FD9001F7B01 /* NetworkService.swift */,
 				1BA9ED712448DB9900A78CE4 /* DataManager.swift */,
 				1B77968B2448FFED003BBAFB /* DatabaseService.swift */,
+				1BB86ECF2464614F0011D00F /* FirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -872,9 +875,9 @@
 		8DAC80523F043CF9CCC00205 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75F88D6F9BF25C14770CA9F1 /* libPods-Eco-Friend.a */,
-				12B07351DB6A2476786D79AB /* libPods-Eco-Friend-Eco-FriendUITests.a */,
-				F5F1CA38B15165908EC844E8 /* libPods-Eco-FriendTests.a */,
+				54E52C1FCA100CC854DB3151 /* Pods_Eco_Friend.framework */,
+				5058BFEB199DDE4A0BEFBE96 /* Pods_Eco_Friend_Eco_FriendUITests.framework */,
+				C6E4F7022FB425D7069EE8C9 /* Pods_Eco_FriendTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -903,7 +906,7 @@
 				1BF67E19239D149900A69134 /* Sources */,
 				1BF67E1A239D149900A69134 /* Frameworks */,
 				1BF67E1B239D149900A69134 /* Resources */,
-				42AEC100F2B0A22C653FE1D7 /* [CP] Copy Pods Resources */,
+				824FC4BAC17418ABAB88B016 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -941,7 +944,7 @@
 				1BF67E3D239D14A000A69134 /* Sources */,
 				1BF67E3E239D14A000A69134 /* Frameworks */,
 				1BF67E3F239D14A000A69134 /* Resources */,
-				9D89DE7199D1F3BE6773EF58 /* [CP] Copy Pods Resources */,
+				3302D76E6152579602D95E4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1059,21 +1062,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		42AEC100F2B0A22C653FE1D7 /* [CP] Copy Pods Resources */ = {
+		3302D76E6152579602D95E4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		824FC4BAC17418ABAB88B016 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend/Pods-Eco-Friend-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		841BA6EAD3BBE7EEF0CB5E97 /* [CP] Check Pods Manifest.lock */ = {
@@ -1096,23 +1116,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D89DE7199D1F3BE6773EF58 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco-Friend-Eco-FriendUITests/Pods-Eco-Friend-Eco-FriendUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC3275EFBD2A25FC3EAF733C /* [CP] Check Pods Manifest.lock */ = {
@@ -1157,6 +1160,7 @@
 				1BDB7DDF23FEC97E0069F699 /* NewsModuleConfigurator.swift in Sources */,
 				1B77C5382420A3C500364395 /* TrashDetailViewController.swift in Sources */,
 				1BDB7E1523FEC9E70069F699 /* MarksInteractorOutput.swift in Sources */,
+				1BB86ED02464614F0011D00F /* FirebaseService.swift in Sources */,
 				1B2F1462241A858900E28DCE /* MarksDetailModuleConfigurator.swift in Sources */,
 				1B77C5392420A3C500364395 /* TrashDetailViewOutput.swift in Sources */,
 				1BF67E23239D149900A69134 /* SceneDelegate.swift in Sources */,

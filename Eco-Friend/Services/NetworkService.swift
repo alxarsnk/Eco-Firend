@@ -46,6 +46,19 @@ class NetworkService {
         }
     }
     
+    public func getTarsh(completionHandler: @escaping (Data?, String? ) -> (Void)) {
+        jsonProvider.request(.getTrash) { (result) in
+            switch result {
+            case .success(let responce):
+                completionHandler(responce.data, nil)
+            case .failure(let error):
+                completionHandler(nil, error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    
     static func clearCookie() {
         
         let dataStore = WKWebsiteDataStore.default()

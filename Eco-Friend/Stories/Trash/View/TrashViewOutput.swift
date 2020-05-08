@@ -12,5 +12,11 @@ protocol TrashViewOutput: AnyObject {
     
     func setupInitialState()
     
-    func showTrashDetail()
+    func showTrashDetail(withModel: Trash)
+    
+    func loadTrash()
+    
+    func getTrashCount() -> Int
+    
+    func getTrash(at index: Int) -> Trash
 }

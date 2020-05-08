@@ -19,6 +19,7 @@ class Global {
 
     public struct Services {
         static let networkService = NetworkService()
+        static let firebaseService = FirebaseService()
     }
     
     public struct Colors {

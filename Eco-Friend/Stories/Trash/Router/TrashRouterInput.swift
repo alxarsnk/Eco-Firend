@@ -10,5 +10,5 @@ import Foundation
 
 protocol TrashRouterInput: AnyObject {
     
-    func showTrashDetail()
+    func showTrashDetail(withModel: Trash)
 }

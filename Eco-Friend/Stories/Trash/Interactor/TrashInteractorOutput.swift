@@ -10,5 +10,7 @@ import Foundation
 
 protocol TrashInteractorOutput: AnyObject {
     
+   func successful()
    
+   func unsucessful(errorString: String)
 }

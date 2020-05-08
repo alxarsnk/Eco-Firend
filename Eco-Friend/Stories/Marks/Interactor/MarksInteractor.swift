@@ -43,6 +43,16 @@ class MarksInteractor: MarksInteractorInput {
     }
     
     func fetchMarks() {
+//        Global.Services.firebaseService.getMarksList { (dictionary, error) -> (Void) in
+//            guard let blockSelf = self else { return }
+//            if error != nil {
+//                blockSelf.presenter.unsucessful(errorString: error!.localizedDescription)
+//            } else if dictionary != nil && error == nil {
+//                blockSelf.decodeJSON(from: responce!)
+//                blockSelf.presenter.successful()
+//            }
+//        }
+        
         Global.Services.networkService.getMarks { [weak self] (responce, errorString) -> (Void) in
             guard let blockSelf = self else { return }
             if errorString != nil {

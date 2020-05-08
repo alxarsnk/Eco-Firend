@@ -3,7 +3,7 @@
 
 target 'Eco-Friend' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_modular_headers!
+  use_frameworks!
 
   # Pods for Eco-Friend
 	pod 'Moya'
@@ -14,6 +14,9 @@ target 'Eco-Friend' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
+	pod 'BoringSSL-GRPC'
+	pod 'gRPC-Core'
+
   target 'Eco-FriendTests' do
     inherit! :search_paths
     # Pods for testing

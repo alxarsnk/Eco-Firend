@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,9 +14,47 @@
                     <view key="view" contentMode="scaleToFill" id="D0u-I6-hXA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDJ-iX-qfs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z9U-iz-hui">
+                                        <rect key="frame" x="16" y="22" width="382" height="358.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh9-VI-fVm">
+                                        <rect key="frame" x="16" y="405.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Z9U-iz-hui" secondAttribute="trailing" constant="16" id="KBJ-zA-HC8"/>
+                                    <constraint firstItem="Lh9-VI-fVm" firstAttribute="top" secondItem="Z9U-iz-hui" secondAttribute="bottom" constant="25" id="fXB-9v-BKh"/>
+                                    <constraint firstItem="Z9U-iz-hui" firstAttribute="leading" secondItem="yDJ-iX-qfs" secondAttribute="leading" constant="16" id="n2l-cF-tSq"/>
+                                    <constraint firstItem="Z9U-iz-hui" firstAttribute="top" secondItem="yDJ-iX-qfs" secondAttribute="top" constant="22" id="rD0-ic-EEs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lh9-VI-fVm" secondAttribute="bottom" constant="16" id="vK5-BN-NbT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yDJ-iX-qfs" firstAttribute="top" secondItem="sDB-Gc-yUi" secondAttribute="top" id="4HR-t4-huH"/>
+                            <constraint firstItem="Z9U-iz-hui" firstAttribute="leading" secondItem="sDB-Gc-yUi" secondAttribute="leading" constant="16" id="RWu-Yz-z3g"/>
+                            <constraint firstItem="sDB-Gc-yUi" firstAttribute="bottom" secondItem="yDJ-iX-qfs" secondAttribute="bottom" id="d9E-GH-1cl"/>
+                            <constraint firstItem="sDB-Gc-yUi" firstAttribute="trailing" secondItem="yDJ-iX-qfs" secondAttribute="trailing" id="dul-Qc-yM9"/>
+                            <constraint firstItem="Z9U-iz-hui" firstAttribute="height" secondItem="D0u-I6-hXA" secondAttribute="height" multiplier="0.4" id="im9-17-dS9"/>
+                            <constraint firstItem="yDJ-iX-qfs" firstAttribute="leading" secondItem="sDB-Gc-yUi" secondAttribute="leading" id="ltG-wP-u3M"/>
+                            <constraint firstItem="sDB-Gc-yUi" firstAttribute="trailing" secondItem="Z9U-iz-hui" secondAttribute="trailing" constant="16" id="n4q-nv-LRQ"/>
+                            <constraint firstItem="sDB-Gc-yUi" firstAttribute="trailing" secondItem="Lh9-VI-fVm" secondAttribute="trailing" constant="16" id="zGc-uU-etj"/>
+                            <constraint firstItem="Lh9-VI-fVm" firstAttribute="leading" secondItem="sDB-Gc-yUi" secondAttribute="leading" constant="16" id="zmy-xG-gUU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sDB-Gc-yUi"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Z9U-iz-hui" id="bSZ-bM-7l8"/>
+                        <outlet property="textLabel" destination="Lh9-VI-fVm" id="RGL-nM-7d9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNI-5C-p90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="HDW-jJ-dwY" customClass="TrashDetailModuleConfigurator" customModule="Eco_Friend" customModuleProvider="target">

@@ -14,8 +14,9 @@ class TrashRouter: TrashRouterInput {
     
     //MARK: - TrashRouterInput
     
-    func showTrashDetail() {
-        let vc = Navigation.getDetailScreen(storyboardName: "TrashDetail", screenName: "trashDetailViewController")
+    func showTrashDetail(withModel: Trash) {
+        let vc = Navigation.getDetailScreen(storyboardName: "TrashDetail", screenName: "trashDetailViewController") as! TrashDetailViewController
+        vc.trashModel = withModel
         view.navigationController?.pushViewController(vc, animated: true)
     }
     

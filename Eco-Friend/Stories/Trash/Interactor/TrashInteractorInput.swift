@@ -10,4 +10,9 @@ import Foundation
 
 protocol TrashInteractorInput: AnyObject {
     
+    func loadTrash()
+    
+    func getTrashCount() -> Int
+    
+    func getTrash(at index: Int) -> Trash 
 }
